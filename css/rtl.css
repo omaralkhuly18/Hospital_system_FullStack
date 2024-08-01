@@ -1,0 +1,66 @@
+.header-info{
+    text-align: justify;
+}
+
+#mobile-menu ul.submenu li a{
+    text-align: right;
+}
+
+.header__menu ul li ul.submenu{
+    right: -30%;
+}
+
+.hero-slider-caption,
+.hero-slider-btn  {
+    text-align: right;
+}
+
+.hero-slider-btn {
+    direction: rtl;
+}
+
+.single-slider{
+    direction: rtl;
+}
+
+.btn-icon span{
+    right: 5px;
+    left: auto;
+}
+
+.btn-icon{
+    padding-left: 50px !important;
+    padding-right: 84px !important;
+}
+
+.play-btn{
+    padding-right: 3px !important;
+    margin-right: 27px !important;
+}
+
+.mean-container a.meanmenu-reveal{
+    left: 0px !important;
+    right: auto !important;
+}
+
+.medical-icon-brand-2{
+    left: -90px;
+    right: auto !important;
+}
+
+.about-author {
+    direction: ltr;
+    justify-content: flex-start;
+}
+
+.justify_content_end{
+    justify-content: flex-end;
+}
+
+.team-area .section-title {
+    text-align: right;
+}
+
+.team-area .btn-icon{
+    padding-left: 84px !important;
+}
