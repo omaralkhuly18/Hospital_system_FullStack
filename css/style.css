@@ -709,21 +709,21 @@ label {
 
 }
 
-.btn.green-bg-btn {
+.btn.blue_bg_btn {
 
     padding: 23px 60px;
 
     border-radius: 30px;
 
-    background: #8fb569;
+    background: #1977cc;
 
     color: #fff;
 
 }
 
-.btn.green-bg-btn:hover {
+.btn.blue_bg_btn:hover {
 
-    background: #E12454;
+    background: #9393fd;
 
 }
 
@@ -906,9 +906,6 @@ header.header_top_nav {
 .header-padding {
 
     padding: 0 120px;
-
-    padding-top: 45px;
-
 }
 
 .transparrent-header {
@@ -948,7 +945,7 @@ header.header_top_nav {
 /* header menu area */
 
 .header-menu-area {
-    background-color: #00000008;
+    background-color: #0000008c;
 }
 
 .logo img {
@@ -1937,11 +1934,13 @@ input.main-search-input:-ms-input-placeholder {
 
 }
 
-.about-text-list ul li i {
+.about-text-list ul li svg {
 
-    height: 40px;
+    height: 30px;
 
-    width: 40px;
+    width: 30px;
+
+    padding: 10px;
 
     line-height: 38px;
 
@@ -1950,8 +1949,6 @@ input.main-search-input:-ms-input-placeholder {
     border-radius: 50%;
 
     background: #f6f5ff;
-
-    padding-left: 3px;
 
     margin-right: 20px;
 
@@ -4137,9 +4134,9 @@ li.price-del i {
 
     border-radius: 50%;
 
-    background-color: rgb(225, 36, 84);
+    background-color: #1977cc;
 
-    box-shadow: 0px 16px 32px 0px rgba(225, 36, 84, 0.4);
+    box-shadow: 0px 16px 16px 0px rgb(64 152 231 / 56%);
 
     line-height: 80px;
 
