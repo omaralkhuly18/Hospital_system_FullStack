@@ -701,7 +701,7 @@ label {
 
 .btn.gray-btn-border:hover {
 
-    background: #E12454;
+    background: #1977cc;
 
     color: #fff;
 
@@ -709,21 +709,21 @@ label {
 
 }
 
-.btn.green-bg-btn {
+.btn.blue_bg_btn {
 
     padding: 23px 60px;
 
     border-radius: 30px;
 
-    background: #8fb569;
+    background: #1977cc;
 
     color: #fff;
 
 }
 
-.btn.green-bg-btn:hover {
+.btn.blue_bg_btn:hover {
 
-    background: #E12454;
+    background: #9393fd;
 
 }
 
@@ -906,9 +906,6 @@ header.header_top_nav {
 .header-padding {
 
     padding: 0 120px;
-
-    padding-top: 45px;
-
 }
 
 .transparrent-header {
@@ -948,7 +945,7 @@ header.header_top_nav {
 /* header menu area */
 
 .header-menu-area {
-    background-color: #00000008;
+    background-color: #0000008c;
 }
 
 .logo img {
@@ -1937,11 +1934,13 @@ input.main-search-input:-ms-input-placeholder {
 
 }
 
-.about-text-list ul li i {
+.about-text-list ul li svg {
 
-    height: 40px;
+    height: 30px;
 
-    width: 40px;
+    width: 30px;
+
+    padding: 10px;
 
     line-height: 38px;
 
@@ -1950,8 +1949,6 @@ input.main-search-input:-ms-input-placeholder {
     border-radius: 50%;
 
     background: #f6f5ff;
-
-    padding-left: 3px;
 
     margin-right: 20px;
 
@@ -2301,7 +2298,7 @@ input.main-search-input:-ms-input-placeholder {
 
 .service-box.service-box-2 .service-content-2 h3 a:hover {
 
-    color: #E12454;
+    color: #1977cc;
 
 }
 
@@ -2330,7 +2327,7 @@ input.main-search-input:-ms-input-placeholder {
 
     left: 0;
 
-    background: #e2e0ff;
+    background: #4098e73b;
 
     bottom: 0;
 
@@ -2340,7 +2337,7 @@ input.main-search-input:-ms-input-placeholder {
 
 .service-content-2 h3 a::before {
 
-    background: #E12454;
+    background: #1977cc;
 
     z-index: 9;
 
@@ -2438,7 +2435,7 @@ input.main-search-input:-ms-input-placeholder {
 
 .service-box-2 .service-content-2 a.service-link:hover {
 
-    color: #e12454;
+    color: #1977cc;
 
 }
 
@@ -2913,7 +2910,7 @@ input.main-search-input:-ms-input-placeholder {
 
     letter-spacing: 2px;
 
-    color: #e12454;
+    color: #4098e7;
 
     padding: 11px 20px;
 
@@ -2955,7 +2952,7 @@ input.main-search-input:-ms-input-placeholder {
 
     left: 0;
 
-    z-index: 99;
+    z-index: 500;
 
     box-shadow: 0px 8px 16px 0px rgba(205, 190, 255, 0.2);
 
@@ -2971,9 +2968,10 @@ input.main-search-input:-ms-input-placeholder {
 
 .team-activation .slick-dots {
 
+    width: 100%;
     text-align: center;
-
-    margin-bottom: 30px;
+    position: absolute;
+    top: -10%;
 
 }
 
@@ -2993,11 +2991,13 @@ input.main-search-input:-ms-input-placeholder {
 
     width: 30px;
 
-    height: 4px;
+    height: 10px;
 
     border: 0;
 
-    background: #e0e9ff;
+    background: #4098e780;
+
+    border-radius: 2.5rem;
 
     margin: 0 5px;
 
@@ -3007,7 +3007,7 @@ input.main-search-input:-ms-input-placeholder {
 
 .team-activation .slick-dots li.slick-active button {
 
-    background: #8fb569;
+    background: #1977cc;
 
 }
 
@@ -4137,9 +4137,9 @@ li.price-del i {
 
     border-radius: 50%;
 
-    background-color: rgb(225, 36, 84);
+    background-color: #1977cc;
 
-    box-shadow: 0px 16px 32px 0px rgba(225, 36, 84, 0.4);
+    box-shadow: 0px 16px 16px 0px rgb(64 152 231 / 56%);
 
     line-height: 80px;
 
@@ -4161,7 +4161,7 @@ li.price-del i {
 
 .testi-quato-icon-green {
 
-    background-color: rgb(143, 181, 105);
+    background-color: rgb(64 152 231);
 
     box-shadow: 0px 16px 32px 0px rgba(143, 181, 105, 0.4);
 
@@ -4171,7 +4171,7 @@ li.price-del i {
 
 .testi-box-2:hover .testi-quato-icon-green {
 
-    background-color: rgb(225, 36, 84);
+    background-color: #1977cc;
 
     box-shadow: 0px 16px 32px 0px rgba(225, 36, 84, 0.4);
 
@@ -4303,9 +4303,9 @@ li.price-del i {
 
 }
 
-.testi-rating-list ul li i {
+.testi-rating-list ul li svg {
 
-    color: #ffae00;
+    color: #1977cc;
 
 }
 
@@ -4767,6 +4767,14 @@ li.price-del i {
 
     margin-top: -241px;
 
+}
+
+.appoinment-right {
+    width: 100%;
+}
+
+.appoinment-right img {
+    width: 100%;
 }
 
 .appoinment-box-content {
@@ -10486,6 +10494,25 @@ p.checkout-coupon input[type="text"] {
 
     font-weight: 500;
 
+}
+
+.team-activation .slick-track {
+    height: 290px;
+}
+
+.slick-track img {
+    width: 100%;
+    height: 100%;
+}
+
+.img_clint_Testimo{
+    width: 80% !important;
+    height: 140px !important;
+}
+
+.slick-track .team-thumb {
+    width: 100%;
+    height: 170px;
 }
 
 .h4appoinment-thumb {
