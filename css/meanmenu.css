@@ -46,9 +46,9 @@ a.meanmenu-reveal {
 
 .mean-container a.meanmenu-reveal {
 
-    border: 1px solid #E12454;
+    border: 1px solid #1977cc;
 
-    color: #E12454;
+    color: #1977cc;
 
     cursor: pointer;
 
@@ -82,7 +82,7 @@ a.meanmenu-reveal {
 
 .mean-container a.meanmenu-reveal span {
 
-    background: #E12454;
+    background: #1977cc;
 
     display: block;
 
@@ -100,7 +100,7 @@ a.meanmenu-reveal {
 
 .mean-container .mean-nav {
 
-    background: #0c1923;
+    background: #4098e7;
 
     float: left;
 
@@ -255,8 +255,14 @@ a.meanmenu-reveal {
     border-width: medium medium 1px 1px;
 
     font-weight: 700;
+    
+    width: 26px;
 
     height: 27px;
+
+    display: flex;
+    
+    justify-content: center;
 
     margin-top: 1px;
 
@@ -270,7 +276,6 @@ a.meanmenu-reveal {
 
     top: 0;
 
-    width: 26px;
 
     z-index: 2;
 
@@ -280,7 +285,7 @@ a.meanmenu-reveal {
 
 .mean-container .mean-nav ul li a.mean-expand:hover {
 
-    background: rgba(0, 0, 0, 0.9);
+    background: blueviolet;
 
 }
 

@@ -10,6 +10,21 @@
     right: -30%;
 }
 
+.mean-container .mean-nav ul li a{
+    text-align: right !important;
+}
+
+.mean-container .mean-nav ul li a.mean-expand{
+    left: 0;
+    right: auto !important;
+}
+
+.header-social-icons{
+    padding-left: 25px;
+
+    padding-right: 0 !important;
+}
+
 .hero-slider-caption,
 .hero-slider-btn  {
     text-align: right;
@@ -63,4 +78,91 @@
 
 .team-area .btn-icon{
     padding-left: 84px !important;
+}
+
+.fact-area .section-text {
+    text-align: right;
+}
+
+.fact-area .section-button {
+    text-align: right;
+}
+
+.cta-satisfied {
+    padding-right: 129px;
+    padding-left: 0 !important;
+    text-align: right;
+}
+
+.single-satisfied h1{
+    margin-left: 20px;
+    margin-right: 0 !important;
+    float: right;
+}
+
+.pricing-area .section-title {
+    text-align: right;
+}
+
+.pricing-content h1,
+.pricing-content p{
+    text-align: right;
+}
+
+.row_col{
+    margin-right: 8.333333%;
+    margin-left: 0 !important;
+}
+
+.latest-news-area .section-title {
+    text-align: right;
+}
+
+.latest-news-area .section-button {
+    text-align: left !important;
+}
+
+.latest-news-content {
+    text-align: right;
+}
+
+.meta-date{
+    margin-left: 29px;
+    margin-right: 0 !important;
+}
+
+.meta-date p{
+    margin-right: 5%;
+}
+
+.emmergency-call{
+    text-align: right;
+}
+
+.f-right{
+    float: right;
+}
+
+.footer-contact-content {
+    text-align: right;
+}
+
+.footer-emailing ul li{
+    text-align: right;   
+}
+
+.row_foo_col{
+    margin-right: 8.333333%;
+
+    margin-left: 0 !important;
+}
+
+.footer-title h3,
+.footer-menu ul li{
+    text-align: right;
+}
+
+.footer-emailing svg {
+    margin-left: 3%;
+    margin-right: 0 !important;
 }
