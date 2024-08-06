@@ -7,6 +7,7 @@
         max-width: 1200px
     }
 }
+
 @media (min-width: 1200px) and (max-width: 1500px) {
 
     .slider-height {
@@ -36,6 +37,12 @@
     .slider-right-2 {
 
         padding-top: 50px;
+
+    }
+
+    .slider_not .slider-right-2 {
+
+        padding-top: 180px;
 
     }
 
@@ -120,49 +127,66 @@
 
 
 }
+
 /* new media */
-@media screen and (max-width: 1485px) and (min-width: 1200px){
-    .height_style_update::before{
+@media screen and (max-width: 991px) and (min-width: 230px) {
+    .header-menu-area.fixed-header {
+        background-color: #3a4752cf;
+    }
+
+    .transparrent-header {
+        position: fixed;
+    }
+
+    .slider_not .slick-track {
+        height: 980px;
+    }
+}
+
+@media screen and (max-width: 1485px) and (min-width: 1200px) {
+    .height_style_update::before {
         height: 900px;
     }
 }
 
-@media screen and (max-width: 1485px) and (min-width: 992px){
-    .dis_none{
+@media screen and (max-width: 1485px) and (min-width: 992px) {
+    .dis_none {
         display: none !important;
     }
 }
 
-@media screen and (max-width: 992px) and (min-width: 230px){
-    .dis_none{
+@media screen and (max-width: 992px) and (min-width: 230px) {
+    .dis_none {
         display: inline-block !important;
     }
-    .header-lang{
+
+    .header-lang {
         display: none !important;
     }
-    .cta-satisfied{
+
+    .cta-satisfied {
         padding: 0 !important;
     }
 }
 
 @media screen and (max-width: 1199px) and (min-width: 991px) {
-    .content_images_system{
+    .content_images_system {
         width: 80%;
     }
 }
 
-@media screen and (max-width: 990px) and (min-width: 768px){
-    .content_images_system{
+@media screen and (max-width: 990px) and (min-width: 768px) {
+    .content_images_system {
         width: 90%;
     }
 }
 
-@media screen and (max-width: 767px) and (min-width: 230px){
-    .content_images_system{
+@media screen and (max-width: 767px) and (min-width: 230px) {
+    .content_images_system {
         width: 70%;
     }
 
-    .team-thumb{
+    .team-thumb {
         display: flex !important;
     }
 
@@ -785,50 +809,8 @@
         overflow: scroll;
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
 /* Tablet desktop :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
 
@@ -1397,6 +1379,7 @@
 
 
 }
+
 /* small mobile :320px. */
 @media (max-width: 767px) {
 
@@ -2687,6 +2670,7 @@
 
 
 }
+
 /* Large Mobile :480px. */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 

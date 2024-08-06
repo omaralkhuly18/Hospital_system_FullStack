@@ -843,7 +843,7 @@ label {
 
     right: 50px;
 
-    bottom: 77px;
+    bottom: 0;
 
     color: #fff;
 
@@ -1585,6 +1585,16 @@ input.main-search-input:-ms-input-placeholder {
     width: 100%;
     height: 850px;
     background-color: rgb(0 0 0 / 60%);
+}
+
+.slider_not .single-slider::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 950px;
+    background-color: rgb(0 0 0 / 32%);
 }
 
 .slider-height {

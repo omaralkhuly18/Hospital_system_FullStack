@@ -1,3 +1,17 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('.header-menu-area');
+
+    window.addEventListener('scroll', function() {
+        if (window.innerWidth <= 991 && window.innerWidth >= 230) {
+            if (window.scrollY > 0) {
+                header.classList.add('fixed-header');
+            } else {
+                header.classList.remove('fixed-header');
+            }
+        }
+    });
+});
+
 (function ($) {
 
     "use strict";

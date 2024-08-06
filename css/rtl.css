@@ -167,3 +167,18 @@
     margin-left: 3%;
     margin-right: 0 !important;
 }
+
+
+#scrollUp{
+    left: 40px;
+
+    right: auto;
+}
+
+.height_not .slick-slider{
+    direction: ltr;
+}
+
+.height_not .slick-slide{
+    direction: rtl;
+}
