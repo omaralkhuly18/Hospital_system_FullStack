@@ -58,6 +58,9 @@
     margin-left: auto;
     margin-right: auto;
 }
+.slider_not .slick-track{
+    height: 980px;
+}
 .slick-track:before,
 .slick-track:after
 {

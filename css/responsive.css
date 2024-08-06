@@ -120,14 +120,26 @@
 
 
 }
-/* 1199px new media */
+/* new media */
 @media screen and (max-width: 1485px) and (min-width: 1200px){
     .height_style_update::before{
         height: 900px;
     }
 }
 
+@media screen and (max-width: 1485px) and (min-width: 992px){
+    .dis_none{
+        display: none !important;
+    }
+}
+
 @media screen and (max-width: 992px) and (min-width: 230px){
+    .dis_none{
+        display: inline-block !important;
+    }
+    .header-lang{
+        display: none !important;
+    }
     .cta-satisfied{
         padding: 0 !important;
     }
@@ -902,7 +914,7 @@
 
         padding: 0 30px;
 
-        padding-top: 45px;
+        /* padding-top: 45px; */
 
     }
 
