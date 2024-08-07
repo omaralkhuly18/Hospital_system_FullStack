@@ -182,3 +182,61 @@
 .height_not .slick-slide{
     direction: rtl;
 }
+
+.search-form{
+    text-align: right;
+}
+
+.appoint-ment-icon{
+    margin-left: 40px;
+    margin-right: 0 !important;
+}
+
+.slider_not form.appointment-form-2 {
+    text-align: right;
+}
+
+.nice-select.postform{
+    text-align: right !important;
+    padding-left: 30px !important;
+    padding-right: 0;
+}
+
+.nice-select.postform::after{
+    left: 5px;
+    right: auto !important;
+}
+
+.slider_not .nice-select.postform .list .option{
+    text-align: right;
+}
+
+.section_one_simple .feature-box{
+    text-align: right;
+}
+
+.section_one_simple .about-right-side{
+    text-align: right;
+}
+
+.section_one_simple .about-text p{
+    padding: 0%;
+}
+
+.section_one_simple .about-text-list ul li svg{
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+.section_two_simple .half_section{
+    text-align: right;
+}
+
+.section_two_simple .about-text p{
+    padding: 0;
+}
+.section_two_simple .testi-quato-icon.about-icon-white{
+    float: left;
+    margin-left: -9%;
+    margin-right: 0;
+}

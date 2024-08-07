@@ -141,6 +141,9 @@
     .slider_not .slick-track {
         height: 980px;
     }
+    .section_one_simple .span_special{
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 1485px) and (min-width: 1200px) {

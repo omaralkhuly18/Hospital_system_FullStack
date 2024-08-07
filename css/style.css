@@ -1587,7 +1587,7 @@ input.main-search-input:-ms-input-placeholder {
     background-color: rgb(0 0 0 / 60%);
 }
 
-.slider_not .single-slider::before{
+.slider_not .single-slider::before {
     content: "";
     position: absolute;
     top: 0;
@@ -1683,7 +1683,7 @@ input.main-search-input:-ms-input-placeholder {
 
     color: #aab6bf;
 
-    text-transform: uppercase;
+    text-transform: none;
 
     letter-spacing: 2px;
 
@@ -1941,6 +1941,9 @@ input.main-search-input:-ms-input-placeholder {
 .about-text-list ul li {
 
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -2010,6 +2013,20 @@ input.main-search-input:-ms-input-placeholder {
 
     margin-right: 30px;
 
+}
+
+.section_two_simple .mv-icon{
+    width: 20%;
+    margin: 0;
+}
+
+.section_two_simple .mv-text{
+    width: 80%;
+}
+
+.section_two_simple .mv-text p{
+    font-size: 15px;
+    padding: 0;
 }
 
 .mv-right-img img {
@@ -4857,6 +4874,10 @@ li.price-del i {
 
 }
 
+.slider_not .appoint-ment-icon {
+    margin: 0 !important;
+}
+
 .appointment-form-2 label {
 
     font-size: 12px;
@@ -4885,6 +4906,10 @@ li.price-del i {
 
     padding-bottom: 8px;
 
+}
+
+.slider_not .appoinment-form-box-option {
+    justify-content: space-around;
 }
 
 .nice-select.postform::after {
@@ -10515,7 +10540,7 @@ p.checkout-coupon input[type="text"] {
     height: 100%;
 }
 
-.img_clint_Testimo{
+.img_clint_Testimo {
     width: 80% !important;
     height: 140px !important;
 }
