@@ -292,3 +292,19 @@
 .section_eight_simple .team-author-info{
     text-align: right;
 }
+
+.bbb_viewed_title_container{
+    direction: rtl;
+}
+
+.bbb_viewed_nav svg{
+    transform: rotate(180deg);
+}
+
+.section_nine_simple .latest-news-box-2 .latest-news-content{
+    text-align: right;
+}
+
+.section_nine_simple .news-meta span{
+    margin-right: 0;
+}

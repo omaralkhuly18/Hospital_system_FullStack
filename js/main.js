@@ -12,6 +12,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// $(document).ready(function () {
+//     // عند التمرير على العنصر
+//     $('.section_eight_simple .owl-item').hover(
+//         function() {
+//             // عند تمرير الفأرة على العنصر
+//             $(this).closest('.owl-stage-outer').css('overflow', 'visible');
+//             $(this).closest('body').css('overflow', 'hidden');
+//         },
+//         function() {
+//             // عند إزالة الفأرة من العنصر
+//             $(this).closest('.owl-stage-outer').css('overflow', 'hidden');
+//             $(this).closest('body').css('overflow', 'visible');
+//         }
+//     );
+// });
+
 (function ($) {
 
     "use strict";
