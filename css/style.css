@@ -922,7 +922,11 @@ header.header_top_nav {
 
 }
 
-.header-cta-info {
+.mobile_icon_spicial {
+    top: auto;
+}
+
+F .header-cta-info {
 
     margin-right: 45px;
 
@@ -947,6 +951,7 @@ header.header_top_nav {
 .header-menu-area.fixed-header {
     height: 85px;
     z-index: 6000;
+    top: 0;
 }
 
 .header-menu-area.fixed-header .container-fluid,
@@ -1157,11 +1162,11 @@ header.header_top_nav {
 
 }
 
-.header-right {
+/* .header-right {
 
     margin-left: 22px;
 
-}
+} */
 
 .header-social-icons ul li {
 
