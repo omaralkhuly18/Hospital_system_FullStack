@@ -20,9 +20,30 @@
 }
 
 .header-social-icons {
-    padding-left: 25px;
+    padding-left: 10px;
 
     padding-right: 0 !important;
+}
+
+.header-cta-text h5,
+.header-cta-text h6{
+    text-align: right;
+}
+
+.search-wrap .main-search-input{
+    text-align: right;
+}
+
+.header-cta-icon{
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.section_settings_conction {
+    width: 100%;
+    height: 60.25px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .hero-slider-caption,
@@ -307,4 +328,8 @@
 
 .section_nine_simple .news-meta span{
     margin-right: 0;
+}
+
+.section_about3 .separator{
+    text-align: right;
 }

@@ -12,6 +12,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('.position_top_bar');
+
+    window.addEventListener('scroll', function() {
+        if (window.innerWidth <= 991 && window.innerWidth >= 230) {
+            if (window.scrollY > 0) {
+                header.classList.add('fixed-header');
+            } else {
+                header.classList.remove('fixed-header');
+            }
+        }
+    });
+});
+
 // $(document).ready(function () {
 //     // عند التمرير على العنصر
 //     $('.section_eight_simple .owl-item').hover(

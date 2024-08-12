@@ -922,7 +922,15 @@ header.header_top_nav {
 
 }
 
-.header-cta-info {
+.position_top_bar {
+    position: relative;
+}
+
+.mobile_icon_spicial {
+    top: auto;
+}
+
+F .header-cta-info {
 
     margin-right: 45px;
 
@@ -947,6 +955,7 @@ header.header_top_nav {
 .header-menu-area.fixed-header {
     height: 85px;
     z-index: 6000;
+    top: 0;
 }
 
 .header-menu-area.fixed-header .container-fluid,
@@ -987,10 +996,34 @@ header.header_top_nav {
 
 }
 
-.header__menu.menu-dark ul li:first-child {
+.theme_3_bg_color .header__menu {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.theme_3_bg_color .header-right {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+/* .header__menu.menu-dark ul li:first-child {
 
     margin-left: 0;
 
+} */
+
+.position_top_bar .header-cta-icon {
+    width: 30%;
+}
+
+.header-cta-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.position_top_bar .header-cta-text {
+    width: 65%;
 }
 
 .header__menu ul li a {
@@ -1027,6 +1060,10 @@ header.header_top_nav {
 
 }
 
+.theme_3_bg_color .header__menu.menu-dark ul li a {
+    color: #ffffff;
+}
+
 .header__menu ul li a:hover {
 
     color: #1977cc;
@@ -1038,6 +1075,11 @@ header.header_top_nav {
     color: #fff;
 
 }
+
+.theme_3_bg_color .header__menu.menu-dark ul li a:hover {
+    color: #beb0c3;
+}
+
 
 .header__menu ul li ul.submenu {
 
@@ -1099,6 +1141,24 @@ header.header_top_nav {
 
 }
 
+.theme_3_bg_color .header__menu.menu-dark ul li ul.submenu {
+
+    background: #009ce9;
+
+}
+
+.theme_3_bg_color .header__menu.menu-dark ul li ul.submenu li a {
+
+    color: white !important;
+
+}
+
+.theme_3_bg_color .header__menu.menu-dark ul li ul.submenu li a:hover {
+
+    color: #2619cc !important;
+
+}
+
 .header__menu ul li ul.submenu li {
 
     margin: 0;
@@ -1157,11 +1217,11 @@ header.header_top_nav {
 
 }
 
-.header-right {
+/* .header-right {
 
     margin-left: 22px;
 
-}
+} */
 
 .header-social-icons ul li {
 
@@ -1673,6 +1733,11 @@ input.main-search-input:-ms-input-placeholder {
 
 }
 
+.hero_not_slider .hero-slider-caption h1{
+    color: #0458a3;
+    font-size: 40px;
+}
+
 .hero-slider-caption p {
 
     margin-bottom: 35px;
@@ -1913,7 +1978,7 @@ input.main-search-input:-ms-input-placeholder {
 
 .author-desination h6 {
 
-    color: #e12454;
+    color: #1977cc;
 
     text-transform: uppercase;
 
@@ -2110,6 +2175,10 @@ input.main-search-input:-ms-input-placeholder {
 
     position: absolute;
 
+    width: 145px;
+
+    height: 145px;
+
     z-index: 9;
 
     right: -90px;
@@ -2118,6 +2187,25 @@ input.main-search-input:-ms-input-placeholder {
 
     transform: translateY(-50%);
 
+    background-color: white;
+
+    border-radius: 50%;
+
+    padding: 3% 3%;
+
+    box-shadow: #f5deb394 0 0 4px 1px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.medical-icon-brand-2 img {
+    width: 100%;
+
+    height: 100%;
 }
 
 .medical-icon-brand-3 {
@@ -4274,9 +4362,11 @@ li.price-del i {
 
 .testi-quato-icon {
 
-    height: 80px;
+    height: 90px;
 
-    width: 80px;
+    width: 90px;
+
+    padding: 1% 1%;
 
     display: inline-block;
 
@@ -4301,6 +4391,10 @@ li.price-del i {
 .testi-quato-icon img {
 
     display: inline-block;
+
+    width: 100%;
+
+    height: 100%;
 
 }
 
@@ -10659,8 +10753,11 @@ p.checkout-coupon input[type="text"] {
 }
 
 .img_clint_Testimo {
-    width: 80% !important;
+    width: 140px !important;
+
     height: 140px !important;
+
+    border-radius: 50%;
 }
 
 .slick-track .team-thumb {

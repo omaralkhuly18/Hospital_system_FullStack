@@ -110,6 +110,10 @@ a.meanmenu-reveal {
 
 }
 
+.position_top_bar .mean-container .mean-nav{
+    position: absolute;
+}
+
 
 
 .mean-container .mean-nav ul {
