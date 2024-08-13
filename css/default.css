@@ -1726,8 +1726,12 @@
 
 }
 
+.theme_bg_blue{
+    background-color: #4098e7;
+}
+
 .theme_3_bg_color{
-    background-color: #1977cc !important;
+    background-color: #1977cc !important ;
 }
 
 .theme-bg2 {
@@ -1742,15 +1746,15 @@
 
 }
 
-.green-bg {
+.blue-opactiy-bg {
 
-    background: #8fb569 !important;
+    background: #1977cc94  !important;
 
 }
 
 .pink-bg {
 
-    background: #e12454 !important;
+    background: #1977cc !important;
 
 }
 

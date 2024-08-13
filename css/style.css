@@ -2545,7 +2545,9 @@ input.main-search-input:-ms-input-placeholder {
 
     display: block;
 
-    background: #e8f1f7;
+    background: #4098e7;
+
+    color: white;
 
     margin: 0;
 
@@ -2557,7 +2559,7 @@ input.main-search-input:-ms-input-placeholder {
 
 .service-box-3 a.service-link:hover {
 
-    background: #e12454;
+    background: #1977cc;
 
     color: #fff;
 
@@ -3069,6 +3071,16 @@ input.main-search-input:-ms-input-placeholder {
 
 }
 
+.section_team3 .team-thumb{
+    width: 100%;
+    height: 300px;
+}
+
+.section_team3 .team-thumb img{
+    width: 100%;
+    height: 100%;
+}
+
 .team-box-3 {
 
     padding: 0;
@@ -3256,13 +3268,17 @@ input.main-search-input:-ms-input-placeholder {
 
     font-size: 14px;
 
-    color: #a0aab1;
+    color: #166bb56b;
 
+}
+
+.section_team3 .team-social-profile ul li a svg{
+    font-size: 16px;
 }
 
 .team-social-profile ul li a:hover {
 
-    color: #ce1b28;
+    color: #1977cc;
 
 }
 
@@ -3276,11 +3292,15 @@ input.main-search-input:-ms-input-placeholder {
 
     background-image: url(../image/fact/map.png);
 
+    opacity: 0.4;
+
     width: 100%;
 
     height: 100%;
 
     background-repeat: no-repeat;
+
+    background-size: cover;
 
     top: 0;
 
@@ -3423,9 +3443,14 @@ input.main-search-input:-ms-input-placeholder {
 
 }
 
+.section_pricing3 .pricing-title h6{
+    background: #3f4952;
+    color: white;
+}
+
 .price-box-flat:hover .pricing-title h6 {
 
-    background: #e12454;
+    background: #1977cc !important;
 
     color: #ffff;
 
@@ -3433,7 +3458,7 @@ input.main-search-input:-ms-input-placeholder {
 
 .price-box-flat:hover .price-btn-2 a {
 
-    background: #8fb569;
+    background: #7cb6da;
 
     color: #ffff;
 
@@ -3517,8 +3542,12 @@ li.price-del i {
 
     margin-top: 60px;
 
-    background: #344a5a;
+    background: #3f4952;
 
+}
+
+.section_pricing3 .pricing-area .pricing-nav{
+    background-color: #004e95;
 }
 
 .pricing-area .pricing-nav .nav-tabs {
@@ -3559,7 +3588,7 @@ li.price-del i {
 
     padding-left: 54px;
 
-    background-color: rgb(225, 36, 84);
+    background-color: #1977cc;
 
     box-shadow: 0px 8px 16px 0px rgba(225, 36, 84, 0.3);
 
@@ -4890,6 +4919,10 @@ li.price-del i {
 
     background-repeat: no-repeat;
 
+    background-size: cover;
+
+    background-position: center;
+
 }
 
 .hire-right-img {
@@ -4905,6 +4938,10 @@ li.price-del i {
     bottom: 0;
 
     background-repeat: no-repeat;
+    
+    background-size: cover;
+    
+    background-position: center;
 
 }
 
@@ -5274,7 +5311,7 @@ li.price-del i {
 
     content: "";
 
-    background: rgba(0, 0, 0, .40);
+    background: rgb(64 152 231);
 
     width: 100%;
 
@@ -5304,7 +5341,7 @@ li.price-del i {
 
     display: inline-block;
 
-    color: #ffc600;
+    color:  #1977cc;
 
     margin-bottom: 10px;
 
@@ -5320,7 +5357,7 @@ li.price-del i {
 
 .author-desination-2 h6 {
 
-    color: #e12454;
+    color:  #1977cc;
 
     text-transform: capitalize;
 
@@ -5348,7 +5385,15 @@ li.price-del i {
 
     content: "";
 
-    background-image: url(../img/membership/map.png);
+    background-image: url(../image/fact/map.png);
+
+    opacity: 0.4;
+
+    background-repeat: no-repeat;
+    
+    background-position: center;
+
+    background-size: cover;
 
     width: 100%;
 
@@ -5424,6 +5469,22 @@ li.price-del i {
 
 }
 
+.section_faq3 .faq-back-shape{
+    width: 300px;
+
+    height: 300px;
+}
+
+.faq-back-shape .img {
+    opacity: 0.3;
+}
+
+.section_faq3 .faq-back-shape .img {
+    width: 100%;
+
+    height: 100%;
+}
+
 .faq-right-box .card {
 
     position: relative;
@@ -5484,7 +5545,7 @@ li.price-del i {
 
     padding: 21px 30px;
 
-    border: 2px solid #e12454;
+    border: 2px solid rgb(64 152 231);
 
     text-decoration: none;
 
@@ -5534,7 +5595,7 @@ li.price-del i {
 
     padding-bottom: 22px;
 
-    border: 2px solid #e12454;
+    border: 2px solid rgb(64 152 231);
 
     background: #fff;
 
@@ -10741,6 +10802,16 @@ p.checkout-coupon input[type="text"] {
 
     font-weight: 500;
 
+}
+
+.section_team3 .section-line,
+.section_membership3 .section-line {
+    top: 35px;
+}
+
+.section_team3 .section-text h4,
+.section_membership3 .section-text h4 {
+    margin-top: 7%;
 }
 
 .slick-track {

@@ -333,3 +333,69 @@
 .section_about3 .separator{
     text-align: right;
 }
+
+.medical-icon-brand{
+    float: right;
+    margin-right: 47px;
+    margin-left: 51px;
+}
+
+.medical-icon-brand::before{
+    right: -28px;
+    left: auto;
+}
+
+.medical-icon-brand::after{
+    right: -55px;
+    left: auto;
+}
+
+.section_servicies3 .section-title {
+    text-align: right;
+}
+
+.section_membership3 .single-membership-box ,
+.section_membership3 .review-box{
+    text-align: right;
+}
+
+.faq-back-shape{
+    right: -75px;
+
+    left: auto;
+}
+
+.section_faq3 .about-title,
+.section_faq3 .faq-right-box .btn-link,
+.section_faq3 .faq-right-box .card-body p{
+    text-align: right;
+}
+
+.section_faq3 .faq-right-box .btn-link::before{
+    left: 43px;
+
+    right: auto;
+}
+
+.section_pricing3 .price-box-flat{
+    text-align: right;
+}
+
+.hire-left-img{
+    right: 0;
+    left: auto;
+}
+
+.go_to_dir_rtl {
+    margin-right: 50%;
+    text-align: right;
+}
+
+.hire-right-img{
+    left: 0;
+    right: auto;
+}
+
+.go_to_dir_ltr{
+    text-align: right;
+}
