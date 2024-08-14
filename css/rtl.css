@@ -399,3 +399,8 @@
 .go_to_dir_ltr{
     text-align: right;
 }
+
+.section_news3 .news-meta span{
+    margin-left: 15px;
+    margin-right: 0;
+}

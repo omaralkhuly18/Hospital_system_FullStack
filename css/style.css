@@ -5419,13 +5419,18 @@ li.price-del i {
 
 }
 
+.section_brand3 .single-brand img{
+    width: 55% !important;
+    height: 100%;
+}
+
 .brand-area::before {
 
     position: absolute;
 
     content: "";
 
-    background: rgba(32, 47, 59, 0.94);
+    background: rgb(36 54 70 / 82%);
 
     left: 0;
 
