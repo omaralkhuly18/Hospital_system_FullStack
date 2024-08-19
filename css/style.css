@@ -986,6 +986,21 @@ F .header-cta-info {
 
 }
 
+.logo_4_style {
+    width: 25%;
+}
+
+.logo_4_style a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo_4_style img {
+    width: 100%;
+}
+
 .header__menu ul li {
 
     display: inline-block;
@@ -1007,6 +1022,7 @@ F .header-cta-info {
     display: flex;
     justify-content: flex-end;
 }
+
 /* .header__menu.menu-dark ul li:first-child {
 
     margin-left: 0;
@@ -1733,7 +1749,7 @@ input.main-search-input:-ms-input-placeholder {
 
 }
 
-.hero_not_slider .hero-slider-caption h1{
+.hero_not_slider .hero-slider-caption h1 {
     color: #0458a3;
     font-size: 40px;
 }
@@ -3071,12 +3087,12 @@ input.main-search-input:-ms-input-placeholder {
 
 }
 
-.section_team3 .team-thumb{
+.section_team3 .team-thumb {
     width: 100%;
     height: 300px;
 }
 
-.section_team3 .team-thumb img{
+.section_team3 .team-thumb img {
     width: 100%;
     height: 100%;
 }
@@ -3220,6 +3236,10 @@ input.main-search-input:-ms-input-placeholder {
 
 }
 
+.service_section4 .slick-dots{
+    top: auto !important;
+}
+
 .slick-dots li {
 
     display: inline-block;
@@ -3272,7 +3292,7 @@ input.main-search-input:-ms-input-placeholder {
 
 }
 
-.section_team3 .team-social-profile ul li a svg{
+.section_team3 .team-social-profile ul li a svg {
     font-size: 16px;
 }
 
@@ -3443,7 +3463,7 @@ input.main-search-input:-ms-input-placeholder {
 
 }
 
-.section_pricing3 .pricing-title h6{
+.section_pricing3 .pricing-title h6 {
     background: #3f4952;
     color: white;
 }
@@ -3546,7 +3566,7 @@ li.price-del i {
 
 }
 
-.section_pricing3 .pricing-area .pricing-nav{
+.section_pricing3 .pricing-area .pricing-nav {
     background-color: #004e95;
 }
 
@@ -4938,9 +4958,9 @@ li.price-del i {
     bottom: 0;
 
     background-repeat: no-repeat;
-    
+
     background-size: cover;
-    
+
     background-position: center;
 
 }
@@ -5341,7 +5361,7 @@ li.price-del i {
 
     display: inline-block;
 
-    color:  #1977cc;
+    color: #1977cc;
 
     margin-bottom: 10px;
 
@@ -5357,7 +5377,7 @@ li.price-del i {
 
 .author-desination-2 h6 {
 
-    color:  #1977cc;
+    color: #1977cc;
 
     text-transform: capitalize;
 
@@ -5390,7 +5410,7 @@ li.price-del i {
     opacity: 0.4;
 
     background-repeat: no-repeat;
-    
+
     background-position: center;
 
     background-size: cover;
@@ -5419,7 +5439,7 @@ li.price-del i {
 
 }
 
-.section_brand3 .single-brand img{
+.section_brand3 .single-brand img {
     width: 55% !important;
     height: 100%;
 }
@@ -5474,7 +5494,7 @@ li.price-del i {
 
 }
 
-.section_faq3 .faq-back-shape{
+.section_faq3 .faq-back-shape {
     width: 300px;
 
     height: 300px;
@@ -10631,7 +10651,7 @@ p.checkout-coupon input[type="text"] {
 
     color: #fff;
 
-    background: #8fb569;
+    background: #4098e7;
 
     height: 50px;
 
@@ -10655,7 +10675,7 @@ p.checkout-coupon input[type="text"] {
 
 .h4service-active .slick-arrow:hover {
 
-    background: #e12454;
+    background: #1977cc;
 
 }
 
@@ -10765,7 +10785,7 @@ p.checkout-coupon input[type="text"] {
 
 .h4team-social ul li a:hover {
 
-    color: #e12454;
+    color: #4098e7;
 
 }
 
@@ -10781,7 +10801,7 @@ p.checkout-coupon input[type="text"] {
 
     border-radius: 50%;
 
-    background-color: #e12454;
+    background-color: #4098e7;
 
     box-shadow: none;
 
@@ -10917,7 +10937,7 @@ p.checkout-coupon input[type="text"] {
 
     font-size: 24px;
 
-    color: #e12454;
+    color: #1977cc;
 
 }
 
@@ -11111,7 +11131,7 @@ p.checkout-coupon input[type="text"] {
 
 .h5service-active .slick-dots li.slick-active button {
 
-    background: #ffc600;
+    background: #4098e7;
 
 }
 
@@ -11574,7 +11594,7 @@ p.checkout-coupon input[type="text"] {
 
 .h5services-content>a:hover {
 
-    color: #e12454;
+    color: #0086ff;
 
 }
 
@@ -11737,6 +11757,8 @@ p.checkout-coupon input[type="text"] {
     font-weight: 600;
 
     margin-bottom: 5px;
+    
+    color: white;
 
 }
 
@@ -11746,7 +11768,7 @@ p.checkout-coupon input[type="text"] {
 
     font-weight: 500;
 
-    color: #223645;
+    color: white;
 
 }
 
@@ -11760,7 +11782,7 @@ p.checkout-coupon input[type="text"] {
 
 .routine__table .table tbody td.active-doctor {
 
-    background: #8fb569;
+    background: #4098e7;
 
 }
 
@@ -11844,7 +11866,7 @@ p.checkout-coupon input[type="text"] {
 
 }
 
-.h5gallery-content>a>i {
+.h5gallery-content>a>svg {
 
     font-size: 20px;
 
@@ -11922,7 +11944,7 @@ p.checkout-coupon input[type="text"] {
 
 .gallery-filter>button.active {
 
-    background: #e12454;
+    background: #4098e7;
 
     border: 2px solid transparent;
 
@@ -11976,7 +11998,7 @@ p.checkout-coupon input[type="text"] {
 
 .h5medical-tab-menu>nav>.nav a.active {
 
-    background: #e12454;
+    background: #4098e7;
 
     color: #fff;
 
@@ -12022,7 +12044,7 @@ p.checkout-coupon input[type="text"] {
 
     height: 5px;
 
-    background: #e12454;
+    background: #4098e7;
 
     bottom: 0;
 

@@ -83,9 +83,12 @@
 .slick-slide {
     display: none;
     float: left;
-
     height: 100%;
     min-height: 1px;
+}
+
+.service_section4 .slick-slide{
+    height: 490px;
 }
 
 [dir='rtl'] .slick-slide {

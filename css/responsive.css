@@ -132,6 +132,11 @@
         background-color: #3a4752cf;
     }
 
+    .page_4_code .position_top_bar.fixed-header{
+        position: fixed;
+        width: 100%;
+    }
+
     .transparrent-header {
         position: fixed;
     }
@@ -258,6 +263,14 @@
     .position_top_bar .logo-3 {
         display: flex;
         width: 80%;
+    }
+    .page_4_code .position_top_bar{
+        height: 85px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
     }
 }
 
@@ -885,6 +898,19 @@
 
 /* Tablet desktop :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
+
+    .page_4_code .position_top_bar {
+        height: 85px;
+    }
+
+    .page_4_code .position_top_bar .container-fluid,
+    .page_4_code .position_top_bar .row {
+        height: 100%;
+    }
+
+    .page_4_code .logo_4_style {
+        width: 60%;
+    }
 
     .hero-text.hero-text-2 {
 
