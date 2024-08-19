@@ -1726,6 +1726,10 @@
 
 }
 
+.color_bg_theme{
+    background-color: #aacdec;
+}
+
 .theme_bg_blue{
     background-color: #4098e7;
 }
@@ -1738,6 +1742,10 @@
 
     background: #1d3e56;
 
+}
+
+.color_bg_theme2{
+    background-color: #98b7d3;
 }
 
 .primary-bg {
@@ -1796,7 +1804,7 @@
 
 .blue_color {
 
-    color: #166ab5;
+    color: #166ab5 !important;
 
 }
 

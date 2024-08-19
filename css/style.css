@@ -97,6 +97,11 @@ body {
 }
 
 
+/* *{
+    border: 0.1px solid;
+} */
+
+
 
 .img,
 img {
@@ -891,13 +896,24 @@ header.header_top_nav {
 
 }
 
+.header_section_info{
+    display: flex;
+}
+
+
 .header-info span {
 
     margin-right: 39px;
 
 }
 
-.header-info span i {
+.header_section_info span{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.header_section_info svg {
 
     margin-right: 10px;
 
@@ -976,6 +992,10 @@ F .header-cta-info {
 
 .header-menu-area {
     background-color: #0000008c;
+}
+
+.page_4_code .header-menu-area{
+    background-color: #1977cc5e;
 }
 
 .logo img {
@@ -1255,7 +1275,7 @@ F .header-cta-info {
 
     font-weight: 500;
 
-    color: white;
+    color: #1977cc;
 
     display: inline-block;
 
@@ -3236,7 +3256,7 @@ input.main-search-input:-ms-input-placeholder {
 
 }
 
-.service_section4 .slick-dots{
+.service_section4 .slick-dots {
     top: auto !important;
 }
 
@@ -10413,7 +10433,7 @@ p.checkout-coupon input[type="text"] {
 
 .top4-menu ul li a.need-help {
 
-    color: #e12454;
+    color: #1977cc;
 
     text-decoration: underline;
 
@@ -10421,7 +10441,7 @@ p.checkout-coupon input[type="text"] {
 
 .top4-menu ul li a:hover {
 
-    color: #e12454;
+    color: #0086c4;
 
 }
 
@@ -10843,6 +10863,10 @@ p.checkout-coupon input[type="text"] {
     height: 290px;
 }
 
+.service_section4 .service-thumb{
+    height: 246px;
+}
+
 .slick-track img {
     width: 100%;
     height: 100%;
@@ -10865,9 +10889,15 @@ p.checkout-coupon input[type="text"] {
 
     width: 50%;
 
-    position: absolute;
-
     height: 100%;
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    position: absolute;
 
     left: 0;
 
@@ -11564,9 +11594,11 @@ p.checkout-coupon input[type="text"] {
 
 .h5services-content>p {
 
-    color: #c0d0dc;
+    color: #ffffff;
 
     margin-bottom: 30px;
+
+    font-size: 14px;
 
 }
 
@@ -11757,7 +11789,7 @@ p.checkout-coupon input[type="text"] {
     font-weight: 600;
 
     margin-bottom: 5px;
-    
+
     color: white;
 
 }
@@ -12098,13 +12130,13 @@ p.checkout-coupon input[type="text"] {
 
 /* fact  */
 
-.h5fact-wrapper>i {
+.h5fact-wrapper>svg {
 
     display: block;
 
     font-size: 40px;
 
-    color: #8fb569;
+    color: #4098e7;
 
     margin-bottom: 25px;
 
@@ -12116,7 +12148,7 @@ p.checkout-coupon input[type="text"] {
 
     font-weight: 600;
 
-    color: #e12454;
+    color: #4098e7;
 
     font-family: "Poppins", sans-serif;
 
