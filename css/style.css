@@ -896,7 +896,7 @@ header.header_top_nav {
 
 }
 
-.header_section_info{
+.header_section_info {
     display: flex;
 }
 
@@ -907,7 +907,7 @@ header.header_top_nav {
 
 }
 
-.header_section_info span{
+.header_section_info span {
     width: 45%;
     display: flex;
     justify-content: center;
@@ -994,7 +994,7 @@ F .header-cta-info {
     background-color: #0000008c;
 }
 
-.page_4_code .header-menu-area{
+.page_4_code .header-menu-area {
     background-color: #1977cc5e;
 }
 
@@ -1066,7 +1066,7 @@ F .header-cta-info {
     height: 100%;
 }
 
-.style_spicial{
+.style_spicial {
     width: 70% !important;
 }
 
@@ -2424,6 +2424,36 @@ input.main-search-input:-ms-input-placeholder {
 
     margin-bottom: 45px;
 
+}
+
+.main_services .service-thumb {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.main_services .service-thumb:before {
+    position: absolute;
+
+    content: "";
+
+    top: -40%;
+
+    left: 25%;
+
+    width: 120px;
+    
+    height: 120px;
+
+    border-radius: 50%;
+
+    background-color: #3d9ae230;
+
+    z-index: 0;
 }
 
 .service-box-3 .service-content-box {
@@ -4174,6 +4204,24 @@ li.price-del i {
 
 }
 
+.main_services .breadcrumb-bg {
+    position: relative;
+
+    height: 650px;
+
+    padding-top: 20%;
+}
+
+.main_services .breadcrumb-bg:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 650px;
+    background-color: #1977cc54;
+}
+
 .small-text {
 
     color: #647589;
@@ -4182,6 +4230,10 @@ li.price-del i {
 
     font-weight: 500;
 
+}
+
+.main_services .small-text {
+    color: white;
 }
 
 .page-title h1 {
@@ -4208,7 +4260,8 @@ li.price-del i {
 
 .page-breadcumb .breadcrumb-item a {
 
-    color: #95a3b3;
+    color: #3d607a;
+
 
     font-weight: 500;
 
@@ -4218,7 +4271,7 @@ li.price-del i {
 
     font-weight: 500;
 
-    color: #e12454;
+    color: #1977cc;
 
 }
 
@@ -4885,7 +4938,7 @@ li.price-del i {
 
 }
 
-.calculate-form i {
+.calculate-form svg {
 
     position: absolute;
 
@@ -10875,7 +10928,7 @@ p.checkout-coupon input[type="text"] {
     height: 290px;
 }
 
-.service_section4 .service-thumb{
+.service_section4 .service-thumb {
     height: 246px;
 }
 
@@ -11083,7 +11136,7 @@ p.checkout-coupon input[type="text"] {
 
 }
 
-.testimonials_section4 .h4testi-iconquato>svg{
+.testimonials_section4 .h4testi-iconquato>svg {
     width: 30px;
 
     height: 30px;
@@ -11874,7 +11927,7 @@ p.checkout-coupon input[type="text"] {
 
 }
 
-.photo_section4 .h5gallery-content{
+.photo_section4 .h5gallery-content {
     height: 100%;
 
     line-height: 50px;
@@ -11882,7 +11935,7 @@ p.checkout-coupon input[type="text"] {
     padding: 6% 0;
 }
 
-.photo_section4 .pink-color{
+.photo_section4 .pink-color {
     font-size: 18px;
 }
 
