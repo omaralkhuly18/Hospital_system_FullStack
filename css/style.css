@@ -1049,6 +1049,14 @@ F .header-cta-info {
 
 } */
 
+.section_settings_conction {
+    height: 90px;
+}
+
+.headers3 .header-cta-info {
+    width: 35%;
+}
+
 .position_top_bar .header-cta-icon {
     width: 30%;
 }
@@ -1056,6 +1064,10 @@ F .header-cta-info {
 .header-cta-icon img {
     width: 100%;
     height: 100%;
+}
+
+.style_spicial{
+    width: 70% !important;
 }
 
 .position_top_bar .header-cta-text {
@@ -11021,7 +11033,7 @@ p.checkout-coupon input[type="text"] {
 
     font-size: 14px;
 
-    color: #ffc600;
+    color: #1977cc;
 
 }
 
@@ -11051,7 +11063,7 @@ p.checkout-coupon input[type="text"] {
 
 }
 
-.h4testi-iconquato>i {
+.h4testi-iconquato>svg {
 
     height: 45px;
 
@@ -11059,7 +11071,7 @@ p.checkout-coupon input[type="text"] {
 
     text-align: center;
 
-    background: #e12454;
+    background: #1977cc;
 
     line-height: 45px;
 
@@ -11069,6 +11081,16 @@ p.checkout-coupon input[type="text"] {
 
     font-size: 16px;
 
+}
+
+.testimonials_section4 .h4testi-iconquato>svg{
+    width: 30px;
+
+    height: 30px;
+
+    font-size: 11px;
+
+    padding: 20%;
 }
 
 .h4testi-iconquato {
@@ -11852,6 +11874,18 @@ p.checkout-coupon input[type="text"] {
 
 }
 
+.photo_section4 .h5gallery-content{
+    height: 100%;
+
+    line-height: 50px;
+
+    padding: 6% 0;
+}
+
+.photo_section4 .pink-color{
+    font-size: 18px;
+}
+
 .h5gallery__wrapper:hover .h5gallery-content {
 
     opacity: 1;
@@ -11936,7 +11970,7 @@ p.checkout-coupon input[type="text"] {
 
 .h5gallery-content>span>a:hover {
 
-    color: #e12454;
+    color: #1977cc;
 
 }
 

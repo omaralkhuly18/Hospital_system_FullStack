@@ -58,9 +58,17 @@
     cursor: progress; }
   
   .mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
-    cursor: -moz-zoom-out;
-    cursor: -webkit-zoom-out;
-    cursor: zoom-out; }
+    cursor: -moz-pointer;
+    cursor: -webkit-pointer;
+    cursor: pointer; 
+  }
+
+  /* .photo_section4  .mfp-zoom-out-cur,
+  .photo_section4 .mfp-zoom-out-cur .mfp-image-holder .mfp-close{
+    cursor: -moz-pointer !important;
+    cursor: -webkit-pointer !important;
+    cursor: pointer !important; 
+  } */
   
   .mfp-zoom {
     cursor: pointer;
@@ -109,7 +117,7 @@
   button.mfp-close,
   button.mfp-arrow {
     overflow: visible;
-    cursor: pointer;
+    cursor: pointer !important;
     background: transparent;
     border: 0;
     -webkit-appearance: none;

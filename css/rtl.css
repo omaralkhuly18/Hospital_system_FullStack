@@ -454,3 +454,81 @@
     right: 40px;
     left: auto;
 }
+
+.photo_section4 .h5gallery-content{
+    height: 100%;
+
+    line-height: 70px;
+
+    padding: 6% 0;
+}
+
+.photo_section4 .pink-color{
+    font-size: 20px;
+}
+
+.appoinment_section4 .h4appoinment-thumb{
+    right: 0;
+    left: auto;
+}
+
+.appoinment_section4 .how_style_dir{
+    margin-right: 50%;
+
+    margin-left: 0;
+}
+
+.appoinment_section4 .h4appoinment-wrapper{
+    text-align: right;
+}
+
+.appoinment_section4 .h4input-icon{
+    right: 0;
+    left: auto;
+}
+
+.medical_section4 .h5medical-content{
+    text-align: right;
+}
+
+.medical_section4 .h5medical-content>h4{
+    padding-right: 0;
+}
+
+.testimonials_section4 .how_style_dir_now{
+    margin-right: 41.666667%;
+
+    margin-left: 0;
+
+    padding-right: 39px;
+
+    padding-left: 0;
+}
+
+.h4testimonials-wrapper{
+    text-align: right;
+}
+
+.facts_section4 .h5fact-wrapper{
+    text-align: right;
+}
+
+.newss_section4 .h4latestnews-box {
+    text-align: right;
+}
+
+.newss_section4 .h4adminnews-date{
+    margin-left: 0;
+
+    margin-right: 50px;
+
+    width: 50%;
+}
+
+.newss_section4 .h4adminnews-date>span{
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-evenly;
+}
