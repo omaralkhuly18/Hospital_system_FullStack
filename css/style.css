@@ -2871,7 +2871,7 @@ input.main-search-input:-ms-input-placeholder {
 
 .more-service-list ul li a:hover .more-service-title {
 
-    color: #e12454;
+    color: #1977cc;
 
 }
 
@@ -4204,7 +4204,8 @@ li.price-del i {
 
 }
 
-.main_services .breadcrumb-bg {
+.main_services .breadcrumb-bg,
+.main_services_details .breadcrumb-bg {
     position: relative;
 
     height: 650px;
@@ -4212,14 +4213,22 @@ li.price-del i {
     padding-top: 20%;
 }
 
-.main_services .breadcrumb-bg:before {
+.main_services .breadcrumb-bg:before,
+.main_services_details .breadcrumb-bg:before {
     position: absolute;
     content: "";
     top: 0;
     left: 0;
     width: 100%;
     height: 650px;
+}
+
+.main_services .breadcrumb-bg:before{
     background-color: #1977cc54;
+}
+
+.main_services_details .breadcrumb-bg:before{
+    background-color: #1977cc99;
 }
 
 .small-text {
@@ -4232,7 +4241,8 @@ li.price-del i {
 
 }
 
-.main_services .small-text {
+.main_services .small-text,
+.main_services_details .small-text {
     color: white;
 }
 
@@ -5060,7 +5070,7 @@ li.price-del i {
 
     box-shadow: 0px 8px 16px 0px rgba(200, 183, 255, 0.2);
 
-    border-top: 6px solid #8fb569;
+    border-top: 6px solid #1977cc;
 
     padding-top: 41px;
 
