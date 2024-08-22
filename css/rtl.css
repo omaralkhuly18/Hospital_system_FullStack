@@ -1,3 +1,7 @@
+article{
+    text-align: right;
+}
+
 .header-info {
     text-align: justify;
 }
@@ -553,4 +557,46 @@
 
 .hire-text{
     text-align: right;
+}
+
+.ser-fea-icon{
+    margin-left: 30px;
+
+    margin-right: 0;
+}
+
+.ser-fea-box{
+    margin-left: 70px;
+
+    margin-right: 0;
+}
+
+.contact-input input{
+    padding-right: 50px;
+
+    padding-left: 0px;
+}
+
+.contact-icon img{
+    right: 20px;
+
+    left: auto;
+}
+
+.service-contact-form .nice-select{
+    padding-right: 50px;
+
+    padding-left: 0px;
+
+    text-align: right !important;
+}
+
+.nice-select:after{
+    right: auto;
+
+    left: 12px;
+}
+
+li.option{
+    text-align: right !important;
 }

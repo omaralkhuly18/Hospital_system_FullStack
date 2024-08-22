@@ -2931,19 +2931,15 @@ input.main-search-input:-ms-input-placeholder {
 
 }
 
-.contact-icon::before {
+.contact-icon img {
 
     position: absolute;
-
-    content: "\f007";
-
-    font-family: "Font Awesome 5 Free";
 
     display: inline-block;
 
     font-size: 14px;
 
-    color: #8fb569;
+    color: #2619cc;
 
     top: 20px;
 
@@ -2953,11 +2949,11 @@ input.main-search-input:-ms-input-placeholder {
 
 }
 
-.contact-mail::before {
+/* .contact-mail::before {
 
     content: "\f0e0";
 
-}
+} */
 
 .service-contact-form .nice-select {
 
@@ -2997,15 +2993,15 @@ input.main-search-input:-ms-input-placeholder {
 
 }
 
-.contact-hourglass::before {
+/* .contact-hourglass::before {
 
     content: "\f254";
 
-}
+} */
 
 .ser-form-btn {
 
-    margin-bottom: -82px;
+    margin-bottom: 10px;
 
 }
 
@@ -4542,6 +4538,12 @@ li.price-del i {
 
 }
 
+.part_article_ar .testi-quato-icon img{
+    width: 50% !important;
+
+    height: 50% !important;
+}
+
 .testi-quato-icon-green {
 
     background-color: rgb(64 152 231);
@@ -4582,7 +4584,7 @@ li.price-del i {
 
     font-weight: 500;
 
-    color: #8fb569;
+    color: #0686c7;
 
     text-transform: uppercase;
 
@@ -4640,6 +4642,10 @@ li.price-del i {
 
     box-shadow: 0px 8px 16px 0px rgba(71, 71, 71, 0.2);
 
+}
+
+.test-author-icon img {
+    border-radius: 50%;
 }
 
 .testi-box {
@@ -7303,7 +7309,7 @@ ul.cat li a:hover {
 
 
 
-.contact-icon::after {
+/* .contact-icon::after {
 
     position: absolute;
 
@@ -7325,7 +7331,7 @@ ul.cat li a:hover {
 
     top: 18px;
 
-}
+} */
 
 .conatct-post-form .contact-icon::before {
 
@@ -12575,3 +12581,47 @@ p.checkout-coupon input[type="text"] {
 .bbb_viewed_item.is_new .item_new {
     display: inline-block;
 }
+
+/* Container for the grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  /* Grid items */
+  .grid-item {
+    overflow: hidden;
+  }
+  
+  .grid-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Responsive Design */
+  
+  /* Large screens (Desktops) */
+  @media screen and (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Medium screens (Tablets) */
+  @media screen and (max-width: 1023px) and (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Small screens (Phones) */
+  @media screen and (max-width: 767px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+  }
+  
