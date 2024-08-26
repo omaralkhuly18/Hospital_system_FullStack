@@ -42,35 +42,83 @@ document.addEventListener('DOMContentLoaded', function () {
 //     );
 // });
 
+document.addEventListener('DOMContentLoaded', function () {
+    // استرجاع التبويبة من معلمة الـ URL أو الـ hash
+    const urlParams = new URLSearchParams(window.location.search);
+    const tabParam = urlParams.get('tab'); // قراءة معلمة الـ URL
+    const hash = window.location.hash.substring(1); // قراءة الـ hash (الجزء بعد #)
+
+    let tabId = tabParam || hash; // تحديد أيهما موجود (معلمة الـ URL أو الـ hash)
+
+    if (tabId) {
+        activateTab(tabId);
+
+        // حفظ التبويبة النشطة في localStorage
+        saveTab(tabId);
+    } else {
+        // استرجاع التبويبة النشطة من localStorage
+        const activeTab = localStorage.getItem('activeTab');
+        if (activeTab) {
+            activateTab(activeTab);
+        } else {
+            // تفعيل التبويبة الافتراضية إذا لم يكن هناك تبويبة نشطة
+            const defaultTab = document.querySelector('.nav-link.active');
+            if (defaultTab) {
+                const defaultTabId = defaultTab.getAttribute('href').substring(1);
+                activateTab(defaultTabId);
+            }
+        }
+    }
+
+    // إضافة مستمع للأحداث لتغيير التبويبة عند الضغط
+    document.querySelectorAll('.nav-link').forEach(tab => {
+        tab.addEventListener('click', function(e) {
+            e.preventDefault(); // منع السلوك الافتراضي للرابط
+
+            const newTabId = this.getAttribute('href').substring(1);
+
+            // تغيير الـ hash بدون إعادة تحميل الصفحة
+            window.history.pushState(null, null, `#${newTabId}`);
+
+            activateTab(newTabId);
+            saveTab(newTabId);
+        });
+    });
+});
+
+function activateTab(tabId) {
+    // إزالة الفئات 'active' و 'show' من كل التبويبات والمقالات
+    const allTabs = document.querySelectorAll('.nav-link');
+    const allPanes = document.querySelectorAll('.tab-pane');
+    allTabs.forEach(tab => tab.classList.remove('active'));
+    allPanes.forEach(pane => {
+        pane.classList.remove('active');
+        pane.classList.remove('show');
+    });
+
+    // إضافة الفئات 'active' و 'show' للتبويبة والمقالة النشطة
+    const activeTab = document.querySelector(`[href="#${tabId}"]`);
+    if (activeTab) {
+        activeTab.classList.add('active');
+    }
+    const activePane = document.querySelector(`#${tabId}`);
+    if (activePane) {
+        activePane.classList.add('active');
+        activePane.classList.add('show');
+    }
+
+    // تفعيل التبويبة باستخدام Bootstrap
+    if (activeTab) {
+        const tabInstance = new bootstrap.Tab(activeTab);
+        tabInstance.show();
+    }
+}
 
 function saveTab(tabId) {
     localStorage.setItem('activeTab', tabId);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    // التحكم في عرض التبويبة باستخدام localStorage
-    var activeTab = localStorage.getItem('activeTab');
-    if (activeTab) {
-        var tabElement = document.querySelector(`[href="#${activeTab}"]`);
-        if (tabElement) {
-            var tabInstance = new bootstrap.Tab(tabElement);
-            tabInstance.show();
-        }
-    }
 
-    // التحكم في عرض التبويبة باستخدام معلمات الرابط
-    const urlParams = new URLSearchParams(window.location.search);
-    const tabId = urlParams.get('tab');
-    if (tabId) {
-        const targetTab = document.querySelector(`#${tabId}-tab`);
-        const targetPane = document.querySelector(`#${tabId}`);
-        if (targetTab && targetPane) {
-            var tab = new bootstrap.Tab(targetTab);
-            tab.show();
-            saveTab(tabId); // حفظ التبويبة المحددة في localStorage
-        }
-    }
-});
 
 (function ($) {
 
