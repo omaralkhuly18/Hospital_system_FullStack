@@ -600,3 +600,11 @@ article{
 li.option{
     text-align: right !important;
 }
+
+.service-widget .widget-title{
+    text-align: right;
+}
+
+.more-service-title{
+    text-align: right;
+}

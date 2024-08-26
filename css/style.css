@@ -2839,6 +2839,8 @@ input.main-search-input:-ms-input-placeholder {
 
     transition: .4s;
 
+    text-align: left;
+
 }
 
 .doctor-details-title {
@@ -4242,6 +4244,29 @@ li.price-del i {
     color: white;
 }
 
+.main_services_details .nav-item{
+    width: 100%;
+}
+
+.nav-tabs .nav-item.show .nav-link .more-service-title,
+.nav-tabs .nav-link.active .more-service-title{
+    color: white;
+}
+
+.service-details-feature {
+    display: flex;
+}
+
+.article_style_one .service-details-feature{
+    display: block;
+}
+
+.article_style_one .how_responcive_1{
+    width: 100%;
+
+    margin: 0 !important;
+}
+
 .page-title h1 {
 
     font-size: 60px;
@@ -4602,7 +4627,7 @@ li.price-del i {
 
     width: 2px;
 
-    background: #e12454;
+    background: #1977cc;
 
     position: absolute;
 
@@ -5087,6 +5112,8 @@ li.price-del i {
     font-size: 40px;
 
     margin-bottom: 10px;
+
+    text-align: left;
 
 }
 

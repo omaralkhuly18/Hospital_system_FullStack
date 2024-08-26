@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('.header-menu-area');
 
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         if (window.innerWidth <= 991 && window.innerWidth >= 230) {
             if (window.scrollY > 0) {
                 header.classList.add('fixed-header');
@@ -12,10 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('.position_top_bar');
 
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         if (window.innerWidth <= 991 && window.innerWidth >= 230) {
             if (window.scrollY > 0) {
                 header.classList.add('fixed-header');
@@ -41,6 +41,36 @@ document.addEventListener('DOMContentLoaded', function() {
 //         }
 //     );
 // });
+
+
+function saveTab(tabId) {
+    localStorage.setItem('activeTab', tabId);
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    // التحكم في عرض التبويبة باستخدام localStorage
+    var activeTab = localStorage.getItem('activeTab');
+    if (activeTab) {
+        var tabElement = document.querySelector(`[href="#${activeTab}"]`);
+        if (tabElement) {
+            var tabInstance = new bootstrap.Tab(tabElement);
+            tabInstance.show();
+        }
+    }
+
+    // التحكم في عرض التبويبة باستخدام معلمات الرابط
+    const urlParams = new URLSearchParams(window.location.search);
+    const tabId = urlParams.get('tab');
+    if (tabId) {
+        const targetTab = document.querySelector(`#${tabId}-tab`);
+        const targetPane = document.querySelector(`#${tabId}`);
+        if (targetTab && targetPane) {
+            var tab = new bootstrap.Tab(targetTab);
+            tab.show();
+            saveTab(tabId); // حفظ التبويبة المحددة في localStorage
+        }
+    }
+});
 
 (function ($) {
 
