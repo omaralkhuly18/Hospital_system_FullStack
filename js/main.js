@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // إضافة مستمع للأحداث لتغيير التبويبة عند الضغط
     document.querySelectorAll('.nav-link').forEach(tab => {
-        tab.addEventListener('click', function(e) {
+        tab.addEventListener('click', function (e) {
             e.preventDefault(); // منع السلوك الافتراضي للرابط
 
             const newTabId = this.getAttribute('href').substring(1);
@@ -118,6 +118,43 @@ function saveTab(tabId) {
     localStorage.setItem('activeTab', tabId);
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    // تحقق مما إذا كانت مكتبة Swiper قد تم تحميلها وتوفرها في الصفحة
+    if (typeof Swiper !== 'undefined' && document.querySelector('.slide-container')) {
+        var swiper = new Swiper(".slide-container", {
+            slidesPerView: 5,
+            spaceBetween: 10,
+            slidesPerGroup: 5,
+            loop: true,
+            centerSlide: "true",
+            fade: "true",
+            grabCursor: "true",
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                520: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                1000: {
+                    slidesPerView: 4,
+                },
+            },
+        });
+    }
+});
 
 
 (function ($) {

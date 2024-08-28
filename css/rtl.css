@@ -538,6 +538,7 @@ article{
 }
 
 .main_services .page-title,
+.main_doctors .page-title,
 .main_services_details .page-title,
 .main_services .facalty-text p{
     text-align: right;
@@ -606,5 +607,17 @@ li.option{
 }
 
 .more-service-title{
+    text-align: right;
+}
+
+.section_view_team .card .profile-details{
+    direction: rtl;
+
+    text-align: right;
+
+    cursor: pointer;
+}
+
+.service-widget{
     text-align: right;
 }

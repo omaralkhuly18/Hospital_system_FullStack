@@ -200,6 +200,16 @@
     }
 }
 
+@media screen and (max-width: 766px) and (min-width: 230px){
+    .hero_not_slider .container {
+        margin-top: 35%;
+        margin-bottom: 5%;
+    }
+    .mfp-iframe-holder .mfp-content{
+        height: 80vh;
+    }
+}
+
 @media screen and (max-width: 549px) and (min-width: 230px) {
     .owl-item.active {
         width: 523px !important;
