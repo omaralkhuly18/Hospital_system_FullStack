@@ -197,6 +197,10 @@ button {
 
 }
 
+textarea{
+    resize: none;
+}
+
 button:focus,
 
 input:focus,
@@ -2402,6 +2406,8 @@ input.main-search-input:-ms-input-placeholder {
 
     top: -50px;
 
+    z-index: -1;
+
 }
 
 .section-text-small h1 {
@@ -4434,6 +4440,35 @@ li.price-del i {
 }
 
 /* 13. Appoinment */
+
+section.section_appoinment {
+    
+    background-color: #1977cc33;
+}
+
+.section_appoinment .container{
+
+    padding-bottom: 7%;
+}
+
+
+
+.section_appoinment .form-group {
+    margin-bottom: 15px;
+}
+
+.section_appoinment .nice-select{
+    width: 100%;
+    font-size: 20px;
+}
+
+.section_appoinment .nice-select .list {
+    width: 30%;
+}
+
+.section_appoinment label{
+    font-size: 20px;
+}
 
 .appoinment-section {
 
@@ -12014,6 +12049,31 @@ p.checkout-coupon input[type="text"] {
 
 .section_view_team .swiper-pagination-bullet {
     background-color: #1977cc;
+}
+
+li.info_services,
+li.info_insurance{
+    display: flex;
+    align-items: center;
+}
+
+.link_goto_back{
+    width: 10%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1977cc;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 2.5rem;
+    transition: 1s;
+}
+
+.link_goto_back:hover{
+    background-color: #166ab5;
+    color: white;
 }
 
 .routine__bg {

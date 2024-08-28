@@ -621,3 +621,17 @@ li.option{
 .service-widget{
     text-align: right;
 }
+
+.section_appoinment .nice-select {
+    text-align: right !important;
+}
+
+.section_appoinment label {
+    float: right;
+}
+
+.section_appoinment .nice-select .list{
+    right: 0;
+
+    left: auto;
+}

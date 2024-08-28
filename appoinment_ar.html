@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title> الخدمات </title>
+    <title> الحجز </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="shortcut icon" type="image/x-icon" href="image/favicon.png"> -->
@@ -25,6 +25,11 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/rtl.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        /* .hidden {
+            display: none;
+        } */
+    </style>
 </head>
 
 <body>
@@ -73,8 +78,8 @@
                                     <!-- <span>EN<i class="fas fa-angle-down"></i></span> -->
                                 </div>
                                 <ul class="header-lang-list">
-                                    <li><a href="services.html">EN</a></li>
-                                    <li><a href="services_ar.html">AR</a></li>
+                                    <li><a href="appoinment.html">EN</a></li>
+                                    <li><a href="appoinment_ar.html">AR</a></li>
                                 </ul>
                             </div>
                             <div class="header-social-icons f-left d-none d-xl-block">
@@ -208,7 +213,8 @@
                                             اللغه +
                                         </a>
                                         <ul class="submenu">
-                                            <li><a href="services.html">EN</a></li>
+                                            <li><a href="appoinment.html">EN</a></li>
+                                            <li><a href="appoinment_ar.html">AR</a></li>
                                             <li><a href="services_ar.html">AR</a></li>
                                         </ul>
                                     </li>
@@ -234,18 +240,12 @@
                 <div class="row">
                     <div class="col-lg-9 col-md-9">
                         <div class="page-title">
-                            <p class="small-text pb-15">
-                                رعاية صحية شاملة,
-                                <br>
-                                تخصصات طبية متنوعة و تقنيات طبية حديثة
-                            </p>
                             <h5 class="blue_color">
-                                رعاية مخصصة لكل مريض ,
-                                <br>
-                                خدمات طوارئ على مدار الساعة
+                                من فضلك قم بملء وإرسال هذه الاستمارة وسيقوم أحد مندوبينا بالاتصال بكم خلال ساعتى عمل
+                                لاستكمال البيانات وتأكيد الحجز
                             </h5>
                             <h1>
-                                خدماتنا
+                                إحجز معانا
                             </h1>
                         </div>
                     </div>
@@ -260,7 +260,7 @@
                                         </a>
                                     </li>
                                     <li class="breadcrumb-item active" aria-current="page">
-                                        الخدمات
+                                        طلب حجز
                                     </li>
                                 </ol>
                             </nav>
@@ -270,352 +270,127 @@
             </div>
         </section>
         <!-- hero-area end -->
-        <!-- about-area start -->
-        <section dir="rtl" class="about-area pt-120 pb-90">
-            <div class="container">
-                <div class="row ">
-                    <div class="col-xl-6 col-lg-6 col-md-12">
-                        <div class="section-title section-title-m-0 pos-rel mb-50 text-right">
-                            <div class="section-icon">
-                                <img class="section-back-icon back-icon-right" src="image/section/section_back_icon.png"
-                                    alt="">
-                            </div>
-                            <div class="section-text section-text-small pos-rel">
-                                <h5>
-                                    مرفق الرعاية الصحية
-                                </h5>
-                                <h3>
-                                    خصائص مرفق الرعاية الصحية في System Clinic
-                                    <br>
-                                    التجهيزات الحديثة , بيئة مريحة وآمنة , خدمات رعاية متنوعة
-                                    <br>
-                                    فريق طبي متكامل , استجابة سريعة للطوارئ
-                                </h3>
-                            </div>
-                        </div>
+        <!-- appoinment section start -->
+        <section dir="rtl" class="section_appoinment">
+            <div class="container pt-5">
+                <h2 class="text-center mb-4">
+                    طلب الحجز
+                </h2>
+                <form id="bookingForm">
+                    <!-- حقل اختيار المكان -->
+                    <div class="form-group">
+                        <label for="placeSelect">اختر المكان:</label>
+                        <select class="form-control" id="placeSelect" required >
+                            <option value="">اختر...</option>
+                            <option value="مستشفى">مستشفى</option>
+                            <option value="عياده">عيادة</option>
+                        </select>
                     </div>
-                    <div class="col-xl-6 col-lg-6 col-md-12">
-                        <div class="facalty-text mb-50">
-                            <p>
-                                يشير "مرفق الرعاية الصحية" إلى مكان متخصص في تقديم الخدمات الطبية والعلاجية للمرضى. في
-                                System Clinic، نعتبر مرفق الرعاية الصحية لدينا مكانًا شاملًا يجمع بين التكنولوجيا الطبية
-                                المتقدمة وفريق من الخبراء المتخصصين لتقديم أعلى مستوى من الرعاية الصحية.
-                            </p>
-                        </div>
+
+                    <!-- حقل اختيار الفرع -->
+                    <div class="form-group hidden" id="branchGroup">
+                        <label for="branchSelect">اختر الفرع:</label>
+                        <select class="form-control" id="branchSelect" required disabled>
+                            <option value="">اختر...</option>
+                            <option value="الهرم">الهرم</option>
+                            <option value="جيزه">جيزه</option>
+                            <option value="فيصل">فيصل</option>
+                            <option value="القاهره">القاهرة</option>
+                        </select>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <div class="service-box service-box-border text-center mb-30">
-                            <div class="service-thumb">
-                                <img src="image/services/service1.png" alt="">
-                            </div>
-                            <div class="service-content">
-                                <h3><a href="services-details_ar.html?tab=servcie_one">
-                                        جراحة الأعصاب
-                                    </a></h3>
-                                <p>
-                                    تشمل هذه الخدمة العمليات الجراحية التي تتعلق بالدماغ والحبل الشوكي والأعصاب الطرفية.
-                                    نقوم بتشخيص وعلاج الحالات مثل الأورام الدماغية، والانزلاق الغضروفي، والإصابات
-                                    العصبية.
-                                </p>
-                                <a class="service-link" href="services-details_ar.html?tab=servcie_one"> إقرأ المزيد
-                                </a>
-                            </div>
-                        </div>
+
+                    <!-- حقل اختيار التخصص الرئيسي -->
+                    <div class="form-group hidden" id="mainSpecialtyGroup">
+                        <label for="mainSpecialtySelect">اختر التخصص الرئيسي:</label>
+                        <select class="form-control" id="mainSpecialtySelect" required disabled>
+                            <option value="">اختر...</option>
+                            <option value="باطنة">باطنة</option>
+                            <option value="نساء">نساء</option>
+                            <option value="عظام">عظام</option>
+                            <option value="صدرية">صدرية</option>
+                            <!-- بقية الخيارات -->
+                        </select>
                     </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <div class="service-box service-box-border text-center mb-30">
-                            <div class="service-thumb">
-                                <img src="image/services/service2.png" alt="">
-                            </div>
-                            <div class="service-content">
-                                <h3><a href="services-details_ar.html?tab=servcie_two">
-                                        طب الأعصاب
-                                    </a></h3>
-                                <p>
-                                    يركز على تشخيص وعلاج الاضطرابات العصبية مثل السكتة الدماغية، والصرع، والتصلب
-                                    المتعدد، وأمراض الزهايمر وباركنسون.
-                                </p>
-                                <a class="service-link" href="services-details_ar.html?tab=servcie_two"> إقرأ المزيد
-                                </a>
-                            </div>
-                        </div>
+
+                    <!-- حقل اختيار التخصص الفرعي -->
+                    <div class="form-group hidden" id="subSpecialtyGroup">
+                        <label for="subSpecialtySelect">اختر التخصص الفرعي:</label>
+                        <select class="form-control" id="subSpecialtySelect" disabled>
+                            <option value="">اختر...</option>
+                            <!-- الخيارات تعتمد على التخصص الرئيسي -->
+                        </select>
                     </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <div class="service-box service-box-border text-center mb-30">
-                            <div class="service-thumb">
-                                <img src="image/services/service3.png" alt="">
-                            </div>
-                            <div class="service-content">
-                                <h3><a href="services-details_ar.html?tab=servcie_three">
-                                        الأشعة
-                                    </a></h3>
-                                <p>
-                                    يتضمن استخدام تقنيات التصوير مثل الأشعة السينية، والتصوير بالرنين المغناطيسي (MRI)،
-                                    والتصوير المقطعي (CT) لتشخيص المشاكل الطبية ورصد التغيرات في حالة المرضى.
-                                </p>
-                                <a class="service-link" href="services-details_ar.html?tab=servcie_three"> إقرأ المزيد
-                                </a>
-                            </div>
-                        </div>
+
+                    <!-- حقل اختيار الطبيب -->
+                    <div class="form-group hidden" id="doctorGroup">
+                        <label for="doctorSelect">اختر الطبيب:</label>
+                        <select class="form-control" id="doctorSelect" required disabled>
+                            <option value="">اختر...</option>
+                            <!-- أسماء الأطباء -->
+                        </select>
                     </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <div class="service-box service-box-border text-center mb-30">
-                            <div class="service-thumb">
-                                <img src="image/services/service4.png" alt="">
-                            </div>
-                            <div class="service-content">
-                                <h3><a href="services-details_ar.html?tab=servcie_four">
-                                        الطب الفيزيائي وإعادة التأهيل
-                                    </a></h3>
-                                <p>
-                                    يهتم بتعزيز الشفاء وتحسين الوظائف البدنية من خلال برامج إعادة التأهيل والعلاج
-                                    الطبيعي. يشمل العلاج لإصابات الحبل الشوكي، والعمود الفقري، والحالات المزمنة
-                                </p>
-                                <a class="service-link" href="services-details_ar.html?tab=servcie_four"> إقرأ المزيد
-                                </a>
-                            </div>
-                        </div>
+
+                    <!-- حقل رسوم الكشف -->
+                    <div class="form-group hidden" id="feesGroup">
+                        <label for="feesInput">رسوم الكشف:</label>
+                        <input type="number" class="form-control" id="feesInput" required disabled>
                     </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <div class="service-box service-box-border text-center mb-30">
-                            <div class="service-thumb">
-                                <img src="image/services/service5.png" alt="">
-                            </div>
-                            <div class="service-content">
-                                <h3><a href="services-details_ar.html?tab=servcie_five">
-                                        الاستشارات الطبية
-                                    </a></h3>
-                                <p>
-                                    نقدم استشارات متخصصة لتقديم المشورة الطبية، التشخيص، وتخطيط العلاج للحالات المختلفة
-                                    بناءً على الأعراض والتاريخ الطبي للمريض.
-                                </p>
-                                <a class="service-link" href="services-details_ar.html?tab=servcie_five"> إقرأ المزيد
-                                </a>
-                            </div>
-                        </div>
+
+                    <!-- حقل اختيار الموعد -->
+                    <div class="form-group hidden" id="appointmentGroup">
+                        <label for="appointmentSelect">اختر الموعد:</label>
+                        <select class="form-control" id="appointmentSelect" required disabled>
+                            <option value="">اختر...</option>
+                            <!-- قائمة بالمواعيد المتاحة -->
+                        </select>
                     </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <div class="service-box service-box-border text-center mb-30">
-                            <div class="service-thumb">
-                                <img src="image/services/service6.png" alt="">
-                            </div>
-                            <div class="service-content">
-                                <h3><a href="services-details_ar.html?tab=servcie_six">
-                                        إدارة الألم
-                                    </a></h3>
-                                <p>
-                                    تتضمن استراتيجيات للتعامل مع الألم المزمن والحاد، بما في ذلك العلاجات الدوائية،
-                                    والعلاج الطبيعي، والتقنيات التداخلية مثل الحقن.
-                                </p>
-                                <a class="service-link" href="services-details_ar.html?tab=servcie_six"> إقرأ المزيد
-                                </a>
-                            </div>
-                        </div>
+
+                    <!-- حقل اختيار نوع الزيارة -->
+                    <div class="form-group hidden" id="visitTypeGroup">
+                        <label for="visitTypeSelect">اختر نوع الزيارة:</label>
+                        <select class="form-control" id="visitTypeSelect" required disabled>
+                            <option value="">اختر...</option>
+                            <option value="كشف">كشف</option>
+                            <option value="استشاره">استشارة</option>
+                        </select>
                     </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <div class="service-box service-box-border text-center mb-30">
-                            <div class="service-thumb">
-                                <img src="image/services/service7.png" alt="">
-                            </div>
-                            <div class="service-content">
-                                <h3><a href="services-details_ar.html?tab=servcie_seven">
-                                        الاختبارات العصبية
-                                    </a></h3>
-                                <p>
-                                    تشمل إجراء اختبارات مثل تخطيط الدماغ الكهربائي (EEG) والمخطط الكهربائي العضلي (EMG)
-                                    لتشخيص حالات الاضطرابات العصبية.
-                                </p>
-                                <a class="service-link" href="services-details_ar.html?tab=servcie_seven"> إقرأ المزيد
-                                </a>
-                            </div>
-                        </div>
+
+                    <!-- حقل الإسم الكامل -->
+                    <div class="form-group">
+                        <label for="fullNameInput">الإسم الكامل:</label>
+                        <input type="text" class="form-control" id="fullNameInput" required disabled>
                     </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <div class="service-box service-box-border text-center mb-30">
-                            <div class="service-thumb">
-                                <img src="image/services/service8.png" alt="">
-                            </div>
-                            <div class="service-content">
-                                <h3><a href="services-details_ar.html?tab=servcie_eight">
-                                        الطب الوقائي
-                                    </a></h3>
-                                <p>
-                                    يركز على الوقاية من الأمراض وتعزيز الصحة العامة من خلال الفحوصات الدورية، وتقديم
-                                    النصائح والإرشادات للحفاظ على نمط حياة صحي. يشمل ذلك فحوصات الكشف المبكر، وبرامج
-                                    التوعية الصحية، والتطعيمات.
-                                </p>
-                                <a class="service-link" href="services-details_ar.html?tab=servcie_eight"> إقرأ المزيد
-                                </a>
-                            </div>
-                        </div>
+
+                    <!-- حقل الإيميل -->
+                    <div class="form-group">
+                        <label for="emailInput">البريد الإلكتروني:</label>
+                        <input type="email" class="form-control" id="emailInput" required disabled>
                     </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <div class="service-box service-box-border text-center mb-30">
-                            <div class="service-thumb">
-                                <img src="image/services/service9.png" alt="">
-                            </div>
-                            <div class="service-content">
-                                <h3><a href="services-details_ar.html?tab=servcie_nine">
-                                        الاستشارات الجينية
-                                    </a></h3>
-                                <p>
-                                    تقدم هذه الخدمة استشارات حول الأمراض الوراثية والمخاطر الجينية. تشمل المساعدة في فهم
-                                    الاختبارات الجينية، وتقديم المشورة بشأن الخيارات العلاجية، ومساعدة العائلات على
-                                    اتخاذ قرارات مستنيرة بشأن الصحة الجينية.
-                                </p>
-                                <a class="service-link" href="services-details_ar.html?tab=servcie_nine"> إقرأ المزيد
-                                </a>
-                            </div>
-                        </div>
+
+                    <!-- حقل رقم الهاتف -->
+                    <div class="form-group">
+                        <label for="phoneInput">رقم الهاتف:</label>
+                        <input type="number" class="form-control" id="phoneInput" required disabled>
                     </div>
-                </div>
+
+                    <!-- حقل التاريخ -->
+                    <div class="form-group">
+                        <label for="dateInput">التاريخ:</label>
+                        <input type="date" class="form-control" id="dateInput" required disabled>
+                    </div>
+
+                    <!-- حقل المعلومات الإضافية -->
+                    <div class="form-group">
+                        <label for="additionalInfoTextarea">معلومات إضافية:</label>
+                        <textarea class="form-control" id="additionalInfoTextarea" rows="3" disabled></textarea>
+                    </div>
+
+                    <!-- زر الإرسال -->
+                    <button type="submit" class="btn btn-primary">إرسال</button>
+                </form>
             </div>
         </section>
-        <!-- about-area end -->
-        <!-- calculate-area start -->
-        <section dir="rtl" class="calculate-area pos-rel pt-115 pb-120"
-            data-background="image/calculate/calculate_bg.jpg"
-            style="background-repeat: no-repeat; background-position: center; background-size: cover;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-7 col-lg-6 col-md-10 text-right">
-                        <div class="section-title calculate-section pos-rel mb-45">
-                            <div class="section-text section-text-white pos-rel">
-                                <h5>
-                                    إجراء مكالمة
-                                </h5>
-                                <h1 class="white-color">
-                                    حاسبة الأسعار
-                                </h1>
-                                <p>
-                                    اتصل برقم خدمة العملاء الخاص بـ System Clinic ,
-                                    استمع إلى الخيارات المتاحة واختر الرقم الذي يتعلق بخدمة حاسبة الأسعار
-                                </p>
-                            </div>
-                        </div>
-                        <div class="section-button section-button-left mb-30">
-                            <a data-animation="fadeInLeft" data-delay=".6s" href="appoinment_ar.html"
-                                class="btn btn-icon btn-icon-green ml-0">
-                                <span>+</span>
-                                حدد موعدا
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-xl-5 col-lg-6">
-                        <div class="calculate-box white-bg">
-                            <div class="calculate-content">
-                                <div class="row">
-                                    <div class="col-xl-12">
-                                        <select>
-                                            <option value="1">
-                                                متى تريد الحصول على دعمنا؟
-                                            </option>
-                                            <option value="2">
-                                                متى تريد الحصول على دعمنا؟
-                                            </option>
-                                        </select>
-                                    </div>
-                                    <div class="col-xl-12">
-                                        <select>
-                                            <option value="1">
-                                                متى تريد منا أن نصل؟
-                                            </option>
-                                            <option value="2">
-                                                متى تريد الحصول على دعمنا؟
-                                            </option>
-                                        </select>
-                                    </div>
-                                    <div class="col-xl-12">
-                                        <select>
-                                            <option value="1">
-                                                كم من الوقت يجب علينا البقاء؟
-                                            </option>
-                                            <option value="2">
-                                                متى تريد الحصول على دعمنا؟
-                                            </option>
-                                        </select>
-                                    </div>
-                                    <div class="col-xl-12">
-                                        <select>
-                                            <option value="1">
-                                                أين موقعك؟
-                                            </option>
-                                            <option value="2">
-                                                متى تريد الحصول على دعمنا؟
-                                            </option>
-                                        </select>
-                                    </div>
-                                    <div class="col-xl-12">
-                                        <form class="calculate-form" action="#">
-                                            <input type="text" placeholder=" رقم هاتفك ">
-                                            <i class="fas fa-phone"></i>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="" class="btn mt-40">
-                                إرسال الاستعلام
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- calculate-area end -->
-        <!-- hiring-area start -->
-        <section dir="rtl" class="hiring-area pt-120 pb-120">
-            <div class="container">
-                <div class="row no-gutters hire-bg-2">
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="hire-img">
-                            <img class="img" src="image/hire/hire1.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="hire-text">
-                            <h3>
-                                اتصل بنا الآن للحصول على استشارتك الطبية الموثوقة!
-                            </h3>
-                            <p>
-                                لا تتردد في التواصل معنا – فريقنا الطبي جاهز للإجابة على جميع استفساراتك , نحن متواجدون
-                                على مدار الساعة لتلبية احتياجاتك الصحية , والحصول على استشارة طبية متخصصة
-                            </p>
-                            <a data-animation="fadeInLeft" data-delay=".6s" href="contact.html"
-                                class="btn btn-icon btn-icon-green ml-0">
-                                <span>+</span>
-                                اتصل بنا
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row no-gutters hire-bg">
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="hire-text">
-                            <h3>
-                                خطوة واحدة نحو صحة أفضل – تقدم الآن لزيارة System Clinic
-                            </h3>
-                            <p>
-                                لا تنتظر! تقدم اليوم وابدأ في تحسين صحتك مع System Clinic ، واتخذ الخطوة الأولى نحو حياة
-                                صحية ، احصل على رعاية طبية متميزة مصممة خصيصًا لك ، تقدم الآن واستفد من خدماتنا
-                                المتقدمة.
-                            </p>
-                            <a data-animation="fadeInLeft" data-delay=".6s" href="#" class="btn btn-icon ml-0">
-                                <span>+</span>
-                                تقدم بطلبك اليوم
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="hire-img">
-                            <img class="img" src="image/hire/hire2.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- hiring-area end -->
+        <!-- appoinment section end -->
     </main>
 
     <!-- footer start -->
@@ -745,7 +520,9 @@
     <!-- footer end -->
 
     <!-- JS here -->
+
     <!-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
+
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/js/all.min.js"></script>
@@ -754,6 +531,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/system_appoinment.js"></script>
     <script src="js/one-page-nav-min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/ajax-form.js"></script>

@@ -1,22 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Grid</title>
     <link rel="stylesheet" href="style_test.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <style>
+
+        .section_appoinment .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="grid-container">
-        <div class="grid-item ">
-            <img src="image/services/service_doctors1.jpg" alt="">
+    <section dir="rtl" class="section_appoinment">
+        <div class="container pt-5">
+            <h2 class="text-center mb-4">
+                طلب الحجز
+            </h2>
+            <form id="bookingForm">
+                <!-- حقل اختيار المكان -->
+                <div class="form-group">
+                    <label for="placeSelect">اختر المكان:</label>
+                    <select class="form-control" id="placeSelect" required>
+                        <option value="">اختر...</option>
+                        <option value="مستشفى">مستشفى</option>
+                        <option value="عياده">عيادة</option>
+                    </select>
+                </div>
+
+                <!-- حقل اختيار الفرع -->
+                <div class="form-group hidden" id="branchGroup">
+                    <label for="branchSelect">اختر الفرع:</label>
+                    <select class="form-control" id="branchSelect" required disabled>
+                        <option value="">اختر...</option>
+                        <option value="الهرم">الهرم</option>
+                        <option value="جيزه">جيزه</option>
+                        <option value="فيصل">فيصل</option>
+                        <option value="القاهره">القاهرة</option>
+                    </select>
+                </div>
+
+                <!-- حقل اختيار التخصص الرئيسي -->
+                <div class="form-group hidden" id="mainSpecialtyGroup">
+                    <label for="mainSpecialtySelect">اختر التخصص الرئيسي:</label>
+                    <select class="form-control" id="mainSpecialtySelect" required disabled>
+                        <option value="">اختر...</option>
+                        <option value="باطنة">باطنة</option>
+                        <option value="نساء">نساء</option>
+                        <option value="عظام">عظام</option>
+                        <option value="صدرية">صدرية</option>
+                        <!-- بقية الخيارات -->
+                    </select>
+                </div>
+
+                <!-- حقل اختيار التخصص الفرعي -->
+                <div class="form-group hidden" id="subSpecialtyGroup">
+                    <label for="subSpecialtySelect">اختر التخصص الفرعي:</label>
+                    <select class="form-control" id="subSpecialtySelect" disabled>
+                        <option value="">اختر...</option>
+                        <!-- الخيارات تعتمد على التخصص الرئيسي -->
+                    </select>
+                </div>
+
+                <!-- حقل اختيار الطبيب -->
+                <div class="form-group hidden" id="doctorGroup">
+                    <label for="doctorSelect">اختر الطبيب:</label>
+                    <select class="form-control" id="doctorSelect" required disabled>
+                        <option value="">اختر...</option>
+                        <!-- أسماء الأطباء -->
+                    </select>
+                </div>
+
+                <!-- حقل رسوم الكشف -->
+                <div class="form-group hidden" id="feesGroup">
+                    <label for="feesInput">رسوم الكشف:</label>
+                    <input type="number" class="form-control" id="feesInput" required disabled>
+                </div>
+
+                <!-- حقل اختيار الموعد -->
+                <div class="form-group hidden" id="appointmentGroup">
+                    <label for="appointmentSelect">اختر الموعد:</label>
+                    <select class="form-control" id="appointmentSelect" required disabled>
+                        <option value="">اختر...</option>
+                        <!-- قائمة بالمواعيد المتاحة -->
+                    </select>
+                </div>
+
+                <!-- حقل اختيار نوع الزيارة -->
+                <div class="form-group hidden" id="visitTypeGroup">
+                    <label for="visitTypeSelect">اختر نوع الزيارة:</label>
+                    <select class="form-control" id="visitTypeSelect" required disabled>
+                        <option value="">اختر...</option>
+                        <option value="كشف">كشف</option>
+                        <option value="استشاره">استشارة</option>
+                    </select>
+                </div>
+
+                <!-- حقل الإسم الكامل -->
+                <div class="form-group">
+                    <label for="fullNameInput">الإسم الكامل:</label>
+                    <input type="text" class="form-control" id="fullNameInput" required disabled>
+                </div>
+
+                <!-- حقل الإيميل -->
+                <div class="form-group">
+                    <label for="emailInput">البريد الإلكتروني:</label>
+                    <input type="email" class="form-control" id="emailInput" required disabled>
+                </div>
+
+                <!-- حقل رقم الهاتف -->
+                <div class="form-group">
+                    <label for="phoneInput">رقم الهاتف:</label>
+                    <input type="number" class="form-control" id="phoneInput" required disabled>
+                </div>
+
+                <!-- حقل التاريخ -->
+                <div class="form-group">
+                    <label for="dateInput">التاريخ:</label>
+                    <input type="date" class="form-control" id="dateInput" required disabled>
+                </div>
+
+                <!-- حقل المعلومات الإضافية -->
+                <div class="form-group">
+                    <label for="additionalInfoTextarea">معلومات إضافية:</label>
+                    <textarea class="form-control" id="additionalInfoTextarea" rows="3" disabled></textarea>
+                </div>
+
+                <!-- زر الإرسال -->
+                <button type="submit" class="btn btn-primary">إرسال</button>
+            </form>
         </div>
-        <div class="grid-item ">
-           <img src="image/services/service_doctors2.jpg" alt="">
-        </div>
-        <div class="grid-item ">
-            <img src="image/services/service_doctors3.jpg" alt="">
-        </div>
-    </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const placeSelect = document.getElementById('placeSelect');
+            const fieldsToEnable = [
+                'branchSelect', 'mainSpecialtySelect', 'subSpecialtySelect',
+                'doctorSelect', 'feesInput', 'appointmentSelect', 'visitTypeSelect',
+                'fullNameInput', 'emailInput', 'phoneInput', 'dateInput', 'additionalInfoTextarea'
+            ];
+            const submitButton = document.querySelector('button[type="submit"]');
+
+            // Enable or disable fields
+            function setFieldsEnabled(enabled) {
+                fieldsToEnable.forEach(function (id) {
+                    document.getElementById(id).disabled = !enabled;
+                });
+                submitButton.disabled = !enabled;
+            }
+
+            // Initially disable all fields except the first select
+            setFieldsEnabled(false);
+
+            // Enable fields when a valid place is selected
+            placeSelect.addEventListener('change', function () {
+                setFieldsEnabled(this.value !== "");
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
+
 </html>

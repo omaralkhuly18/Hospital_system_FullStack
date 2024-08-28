@@ -1,67 +1,37 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const header = document.querySelector('.header-menu-area');
+    // *** أكواد التمرير لإضافة وتعديل الكلاس على العناصر ***
+
+    // كود لتثبيت الهيدر عند التمرير
+    const headerMenuArea = document.querySelector('.header-menu-area');
+    const positionTopBar = document.querySelector('.position_top_bar');
 
     window.addEventListener('scroll', function () {
         if (window.innerWidth <= 991 && window.innerWidth >= 230) {
             if (window.scrollY > 0) {
-                header.classList.add('fixed-header');
+                headerMenuArea.classList.add('fixed-header');
+                positionTopBar.classList.add('fixed-header');
             } else {
-                header.classList.remove('fixed-header');
+                headerMenuArea.classList.remove('fixed-header');
+                positionTopBar.classList.remove('fixed-header');
             }
         }
     });
-});
 
-document.addEventListener('DOMContentLoaded', function () {
-    const header = document.querySelector('.position_top_bar');
+    // *** أكواد التعامل مع التبويبات (Tabs) ***
 
-    window.addEventListener('scroll', function () {
-        if (window.innerWidth <= 991 && window.innerWidth >= 230) {
-            if (window.scrollY > 0) {
-                header.classList.add('fixed-header');
-            } else {
-                header.classList.remove('fixed-header');
-            }
-        }
-    });
-});
-
-// $(document).ready(function () {
-//     // عند التمرير على العنصر
-//     $('.section_eight_simple .owl-item').hover(
-//         function() {
-//             // عند تمرير الفأرة على العنصر
-//             $(this).closest('.owl-stage-outer').css('overflow', 'visible');
-//             $(this).closest('body').css('overflow', 'hidden');
-//         },
-//         function() {
-//             // عند إزالة الفأرة من العنصر
-//             $(this).closest('.owl-stage-outer').css('overflow', 'hidden');
-//             $(this).closest('body').css('overflow', 'visible');
-//         }
-//     );
-// });
-
-document.addEventListener('DOMContentLoaded', function () {
-    // استرجاع التبويبة من معلمة الـ URL أو الـ hash
     const urlParams = new URLSearchParams(window.location.search);
-    const tabParam = urlParams.get('tab'); // قراءة معلمة الـ URL
-    const hash = window.location.hash.substring(1); // قراءة الـ hash (الجزء بعد #)
-
-    let tabId = tabParam || hash; // تحديد أيهما موجود (معلمة الـ URL أو الـ hash)
+    const tabParam = urlParams.get('tab');
+    const hash = window.location.hash.substring(1);
+    let tabId = tabParam || hash;
 
     if (tabId) {
         activateTab(tabId);
-
-        // حفظ التبويبة النشطة في localStorage
         saveTab(tabId);
     } else {
-        // استرجاع التبويبة النشطة من localStorage
         const activeTab = localStorage.getItem('activeTab');
         if (activeTab) {
             activateTab(activeTab);
         } else {
-            // تفعيل التبويبة الافتراضية إذا لم يكن هناك تبويبة نشطة
             const defaultTab = document.querySelector('.nav-link.active');
             if (defaultTab) {
                 const defaultTabId = defaultTab.getAttribute('href').substring(1);
@@ -70,56 +40,47 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // إضافة مستمع للأحداث لتغيير التبويبة عند الضغط
     document.querySelectorAll('.nav-link').forEach(tab => {
         tab.addEventListener('click', function (e) {
-            e.preventDefault(); // منع السلوك الافتراضي للرابط
-
+            e.preventDefault();
             const newTabId = this.getAttribute('href').substring(1);
-
-            // تغيير الـ hash بدون إعادة تحميل الصفحة
             window.history.pushState(null, null, `#${newTabId}`);
-
             activateTab(newTabId);
             saveTab(newTabId);
         });
     });
-});
 
-function activateTab(tabId) {
-    // إزالة الفئات 'active' و 'show' من كل التبويبات والمقالات
-    const allTabs = document.querySelectorAll('.nav-link');
-    const allPanes = document.querySelectorAll('.tab-pane');
-    allTabs.forEach(tab => tab.classList.remove('active'));
-    allPanes.forEach(pane => {
-        pane.classList.remove('active');
-        pane.classList.remove('show');
-    });
+    function activateTab(tabId) {
+        const allTabs = document.querySelectorAll('.nav-link');
+        const allPanes = document.querySelectorAll('.tab-pane');
+        allTabs.forEach(tab => tab.classList.remove('active'));
+        allPanes.forEach(pane => {
+            pane.classList.remove('active');
+            pane.classList.remove('show');
+        });
 
-    // إضافة الفئات 'active' و 'show' للتبويبة والمقالة النشطة
-    const activeTab = document.querySelector(`[href="#${tabId}"]`);
-    if (activeTab) {
-        activeTab.classList.add('active');
+        const activeTab = document.querySelector(`[href="#${tabId}"]`);
+        if (activeTab) {
+            activeTab.classList.add('active');
+        }
+        const activePane = document.querySelector(`#${tabId}`);
+        if (activePane) {
+            activePane.classList.add('active');
+            activePane.classList.add('show');
+        }
+
+        if (activeTab) {
+            const tabInstance = new bootstrap.Tab(activeTab);
+            tabInstance.show();
+        }
     }
-    const activePane = document.querySelector(`#${tabId}`);
-    if (activePane) {
-        activePane.classList.add('active');
-        activePane.classList.add('show');
+
+    function saveTab(tabId) {
+        localStorage.setItem('activeTab', tabId);
     }
 
-    // تفعيل التبويبة باستخدام Bootstrap
-    if (activeTab) {
-        const tabInstance = new bootstrap.Tab(activeTab);
-        tabInstance.show();
-    }
-}
+    // *** إعداد مكتبة Swiper ***
 
-function saveTab(tabId) {
-    localStorage.setItem('activeTab', tabId);
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    // تحقق مما إذا كانت مكتبة Swiper قد تم تحميلها وتوفرها في الصفحة
     if (typeof Swiper !== 'undefined' && document.querySelector('.slide-container')) {
         var swiper = new Swiper(".slide-container", {
             slidesPerView: 5,
