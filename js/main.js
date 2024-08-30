@@ -1,21 +1,25 @@
 document.addEventListener('DOMContentLoaded', function () {
     // *** أكواد التمرير لإضافة وتعديل الكلاس على العناصر ***
 
-    // كود لتثبيت الهيدر عند التمرير
     const headerMenuArea = document.querySelector('.header-menu-area');
     const positionTopBar = document.querySelector('.position_top_bar');
 
-    window.addEventListener('scroll', function () {
-        if (window.innerWidth <= 991 && window.innerWidth >= 230) {
-            if (window.scrollY > 0) {
-                headerMenuArea.classList.add('fixed-header');
-                positionTopBar.classList.add('fixed-header');
-            } else {
-                headerMenuArea.classList.remove('fixed-header');
-                positionTopBar.classList.remove('fixed-header');
+    // تحقق من وجود العناصر قبل الاستمرار
+    if (headerMenuArea && positionTopBar) {
+        window.addEventListener('scroll', function () {
+            if (window.innerWidth <= 991 && window.innerWidth >= 230) {
+                if (window.scrollY > 0) {
+                    headerMenuArea.classList.add('fixed-header');
+                    positionTopBar.classList.add('fixed-header');
+                } else {
+                    headerMenuArea.classList.remove('fixed-header');
+                    positionTopBar.classList.remove('fixed-header');
+                }
             }
-        }
-    });
+        });
+    } else {
+        console.warn('عناصر .header-menu-area أو .position_top_bar غير موجودة في الـ DOM.');
+    }
 
     // *** أكواد التعامل مع التبويبات (Tabs) ***
 
@@ -115,7 +119,37 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         });
     }
+
+
+    // const placeSelect = document.getElementById('placeSelect');
+    // if (placeSelect) {
+    //     const fieldsToEnable = [
+    //         'branchSelect', 'mainSpecialtySelect', 'subSpecialtySelect',
+    //         'doctorSelect', 'feesInput', 'appointmentSelect', 'visitTypeSelect',
+    //         'fullNameInput', 'emailInput', 'phoneInput', 'dateInput', 'additionalInfoTextarea'
+    //     ];
+    //     const submitButton = document.querySelector('button[type="submit"]');
+
+    //     function setFieldsEnabled(enabled) {
+    //         fieldsToEnable.forEach(function (id) {
+    //             const element = document.getElementById(id);
+    //             if (element) {
+    //                 element.disabled = !enabled;
+    //             }
+    //         });
+    //         if (submitButton) {
+    //             submitButton.disabled = !enabled;
+    //         }
+    //     }
+
+    //     setFieldsEnabled(false);
+
+    //     placeSelect.addEventListener('change', function () {
+    //         setFieldsEnabled(this.value !== "");
+    //     });
+    // }
 });
+
 
 
 (function ($) {

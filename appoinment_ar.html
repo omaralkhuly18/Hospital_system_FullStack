@@ -25,11 +25,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/rtl.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <style>
-        /* .hidden {
-            display: none;
-        } */
-    </style>
+
 </head>
 
 <body>
@@ -277,112 +273,131 @@
                     طلب الحجز
                 </h2>
                 <form id="bookingForm">
-                    <!-- حقل اختيار المكان -->
-                    <div class="form-group">
-                        <label for="placeSelect">اختر المكان:</label>
-                        <select class="form-control" id="placeSelect" required >
-                            <option value="">اختر...</option>
-                            <option value="مستشفى">مستشفى</option>
-                            <option value="عياده">عيادة</option>
-                        </select>
+                    <div class="row">
+                        <!-- حقل اختيار المكان -->
+                        <div class="form-group col-lg-3">
+                            <label for="placeSelect">اختر المكان:</label>
+                            <select class="form-control" id="placeSelect" required>
+                                <option value="">اختر...</option>
+                                <option value="مستشفى">مستشفى</option>
+                                <option value="عياده">عيادة</option>
+                            </select>
+                        </div>
+
+                        <!-- حقل اختيار الفرع -->
+                        <div class="form-group col-lg-3 hidden" id="branch" onchange="updateSpecialties()">
+                            <label for="branchSelect">اختر الفرع:</label>
+                            <select class="form-control" id="branchSelect" required>
+                                <option value="">اختر...</option>
+                                <option value="الهرم">الهرم</option>
+                                <option value="جيزه">جيزه</option>
+                                <option value="فيصل">فيصل</option>
+                                <option value="القاهره">القاهرة</option>
+                            </select>
+                        </div>
+
+                        <!-- حقل اختيار التخصص الرئيسي -->
+                        <div class="form-group col-lg-3 hidden" id="mainSpecialtyGroup">
+                            <label for="mainSpecialty">اختر التخصص الرئيسي:</label>
+                            <select class="form-control" id="mainSpecialty" onchange="updateSubSpecialties()" required>
+                                <option value="">اختر...</option>
+                                <option value="باطنة">
+                                    باطنة
+                                </option>
+                                <option value="نساء">
+                                    نساء
+                                </option>
+                                <option value="عظام">
+                                    عظام
+                                </option>
+                                <option value="صدرية">
+                                    صدرية
+                                </option>
+                                <!-- بقية الخيارات -->
+                            </select>
+                        </div>
+
+                        <!-- حقل اختيار التخصص الفرعي -->
+                        <div class="form-group col-lg-3 hidden" id="subSpecialtyGroup">
+                            <label for="subSpecialty">اختر التخصص الفرعي:</label>
+                            <select class="form-control" id="subSpecialty" onchange="updateDoctors()">
+                                <option value="">اختر...</option>
+                                <!-- الخيارات تعتمد على التخصص الرئيسي -->
+                            </select>
+                        </div>
                     </div>
 
-                    <!-- حقل اختيار الفرع -->
-                    <div class="form-group hidden" id="branchGroup">
-                        <label for="branchSelect">اختر الفرع:</label>
-                        <select class="form-control" id="branchSelect" required disabled>
-                            <option value="">اختر...</option>
-                            <option value="الهرم">الهرم</option>
-                            <option value="جيزه">جيزه</option>
-                            <option value="فيصل">فيصل</option>
-                            <option value="القاهره">القاهرة</option>
-                        </select>
+                    <div class="row">
+                        <!-- حقل اختيار الطبيب -->
+                        <div class="form-group col-lg-3 hidden" id="doctorGroup">
+                            <label for="doctor">اختر الطبيب:</label>
+                            <select class="form-control" id="doctor" required>
+                                <option value="">اختر...</option>
+                                <!-- أسماء الأطباء -->
+                            </select>
+                        </div>
+
+                        <!-- حقل رسوم الكشف -->
+                        <div class="form-group col-lg-3 hidden" id="feesGroup">
+                            <label for="feesInput">رسوم الكشف:</label>
+                            <input type="number" class="form-control" id="feesInput" placeholder=" رسوم الكشف "
+                                required>
+                        </div>
+
+                        <!-- حقل اختيار الموعد -->
+                        <div class="form-group col-lg-3 hidden" id="appointmentGroup">
+                            <label for="appointmentSelect">اختر الموعد:</label>
+                            <select class="form-control" id="appointmentSelect" required>
+                                <option value="">اختر...</option>
+                                <!-- قائمة بالمواعيد المتاحة -->
+                            </select>
+                        </div>
+
+                        <!-- حقل اختيار نوع الزيارة -->
+                        <div class="form-group col-lg-3 hidden" id="visitTypeGroup">
+                            <label for="visitTypeSelect">اختر نوع الزيارة:</label>
+                            <select class="form-control" id="visitTypeSelect" required>
+                                <option value="">اختر...</option>
+                                <option value="كشف">كشف</option>
+                                <option value="استشاره">استشارة</option>
+                            </select>
+                        </div>
                     </div>
 
-                    <!-- حقل اختيار التخصص الرئيسي -->
-                    <div class="form-group hidden" id="mainSpecialtyGroup">
-                        <label for="mainSpecialtySelect">اختر التخصص الرئيسي:</label>
-                        <select class="form-control" id="mainSpecialtySelect" required disabled>
-                            <option value="">اختر...</option>
-                            <option value="باطنة">باطنة</option>
-                            <option value="نساء">نساء</option>
-                            <option value="عظام">عظام</option>
-                            <option value="صدرية">صدرية</option>
-                            <!-- بقية الخيارات -->
-                        </select>
-                    </div>
+                    <div class="row">
+                        <!-- حقل الإسم الكامل -->
+                        <div class="form-group col-lg-3">
+                            <label for="fullNameInput">الإسم الكامل:</label>
+                            <input type="text" class="form-control" id="fullNameInput" placeholder=" الإسم الكامل "
+                                required>
+                        </div>
 
-                    <!-- حقل اختيار التخصص الفرعي -->
-                    <div class="form-group hidden" id="subSpecialtyGroup">
-                        <label for="subSpecialtySelect">اختر التخصص الفرعي:</label>
-                        <select class="form-control" id="subSpecialtySelect" disabled>
-                            <option value="">اختر...</option>
-                            <!-- الخيارات تعتمد على التخصص الرئيسي -->
-                        </select>
-                    </div>
+                        <!-- حقل الإيميل -->
+                        <div class="form-group col-lg-3">
+                            <label for="emailInput">البريد الإلكتروني:</label>
+                            <input type="email" class="form-control" id="emailInput" placeholder=" البريد الإلكتروني "
+                                required>
+                        </div>
 
-                    <!-- حقل اختيار الطبيب -->
-                    <div class="form-group hidden" id="doctorGroup">
-                        <label for="doctorSelect">اختر الطبيب:</label>
-                        <select class="form-control" id="doctorSelect" required disabled>
-                            <option value="">اختر...</option>
-                            <!-- أسماء الأطباء -->
-                        </select>
-                    </div>
+                        <!-- حقل رقم الهاتف -->
+                        <div class="form-group col-lg-3">
+                            <label for="phoneInput">رقم الهاتف:</label>
+                            <input type="number" class="form-control" id="phoneInput" placeholder=" رقم الهاتف "
+                                required>
+                        </div>
 
-                    <!-- حقل رسوم الكشف -->
-                    <div class="form-group hidden" id="feesGroup">
-                        <label for="feesInput">رسوم الكشف:</label>
-                        <input type="number" class="form-control" id="feesInput" required disabled>
-                    </div>
-
-                    <!-- حقل اختيار الموعد -->
-                    <div class="form-group hidden" id="appointmentGroup">
-                        <label for="appointmentSelect">اختر الموعد:</label>
-                        <select class="form-control" id="appointmentSelect" required disabled>
-                            <option value="">اختر...</option>
-                            <!-- قائمة بالمواعيد المتاحة -->
-                        </select>
-                    </div>
-
-                    <!-- حقل اختيار نوع الزيارة -->
-                    <div class="form-group hidden" id="visitTypeGroup">
-                        <label for="visitTypeSelect">اختر نوع الزيارة:</label>
-                        <select class="form-control" id="visitTypeSelect" required disabled>
-                            <option value="">اختر...</option>
-                            <option value="كشف">كشف</option>
-                            <option value="استشاره">استشارة</option>
-                        </select>
-                    </div>
-
-                    <!-- حقل الإسم الكامل -->
-                    <div class="form-group">
-                        <label for="fullNameInput">الإسم الكامل:</label>
-                        <input type="text" class="form-control" id="fullNameInput" required disabled>
-                    </div>
-
-                    <!-- حقل الإيميل -->
-                    <div class="form-group">
-                        <label for="emailInput">البريد الإلكتروني:</label>
-                        <input type="email" class="form-control" id="emailInput" required disabled>
-                    </div>
-
-                    <!-- حقل رقم الهاتف -->
-                    <div class="form-group">
-                        <label for="phoneInput">رقم الهاتف:</label>
-                        <input type="number" class="form-control" id="phoneInput" required disabled>
-                    </div>
-
-                    <!-- حقل التاريخ -->
-                    <div class="form-group">
-                        <label for="dateInput">التاريخ:</label>
-                        <input type="date" class="form-control" id="dateInput" required disabled>
+                        <!-- حقل التاريخ -->
+                        <div class="form-group col-lg-3">
+                            <label for="dateInput">التاريخ:</label>
+                            <input type="date" class="form-control" id="dateInput" placeholder=" التاريخ " required>
+                        </div>
                     </div>
 
                     <!-- حقل المعلومات الإضافية -->
                     <div class="form-group">
                         <label for="additionalInfoTextarea">معلومات إضافية:</label>
-                        <textarea class="form-control" id="additionalInfoTextarea" rows="3" disabled></textarea>
+                        <textarea class="form-control" placeholder=" معلومات إضافية " id="additionalInfoTextarea"
+                            rows="3"></textarea>
                     </div>
 
                     <!-- زر الإرسال -->
@@ -521,8 +536,81 @@
 
     <!-- JS here -->
 
-    <!-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
+    <!--  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
+    <script>
+        const specialtiesData = {
+            branch1: {
+                main1: ["sub1", "sub2"],
+                main2: ["sub3", "sub4"]
+            },
+            branch2: {
+                main1: ["sub5", "sub6"],
+                main2: ["sub7", "sub8"]
+            }
+        };
 
+        const doctorsData = {
+            sub1: ["Doctor A", "Doctor B"],
+            sub2: ["Doctor C"],
+            sub3: ["Doctor D", "Doctor E"],
+            sub4: ["Doctor F"],
+            sub5: ["Doctor G", "Doctor H"],
+            sub6: ["Doctor I"],
+            sub7: ["Doctor J"],
+            sub8: ["Doctor K"]
+        };
+
+        // Functions to update select options
+        function updateSpecialties() {
+            const branch = document.getElementById('branch').value;
+            const mainSpecialty = document.getElementById('mainSpecialty');
+            mainSpecialty.innerHTML = '<option value="">اختر التخصص الأساسي</option>';
+
+            if (branch) {
+                Object.keys(specialtiesData[branch]).forEach(main => {
+                    const option = document.createElement('option');
+                    option.value = main;
+                    option.textContent = main;
+                    mainSpecialty.appendChild(option);
+                });
+            }
+
+            updateSubSpecialties();  // Reset sub-specialties and doctors when branch changes
+        }
+
+        function updateSubSpecialties() {
+            const branch = document.getElementById('branch').value;
+            const mainSpecialty = document.getElementById('mainSpecialty').value;
+            const subSpecialty = document.getElementById('subSpecialty');
+            subSpecialty.innerHTML = '<option value="">اختر التخصص الفرعي</option>';
+
+            if (branch && mainSpecialty) {
+                specialtiesData[branch][mainSpecialty].forEach(sub => {
+                    const option = document.createElement('option');
+                    option.value = sub;
+                    option.textContent = sub;
+                    subSpecialty.appendChild(option);
+                });
+            }
+
+            updateDoctors();  // Reset doctors when main specialty changes
+        }
+
+        function updateDoctors() {
+            const subSpecialty = document.getElementById('subSpecialty').value;
+            const doctor = document.getElementById('doctor');
+            doctor.innerHTML = '<option value="">اختر الطبيب</option>';
+
+            if (subSpecialty) {
+                doctorsData[subSpecialty].forEach(doc => {
+                    const option = document.createElement('option');
+                    option.value = doc;
+                    option.textContent = doc;
+                    doctor.appendChild(option);
+                });
+            }
+        }
+    </script>
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/js/all.min.js"></script>
@@ -531,7 +619,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/system_appoinment.js"></script>
     <script src="js/one-page-nav-min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/ajax-form.js"></script>

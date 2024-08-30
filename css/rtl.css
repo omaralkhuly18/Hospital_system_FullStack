@@ -635,3 +635,7 @@ li.option{
 
     left: auto;
 }
+
+.section_appoinment .container {
+    padding-bottom: 7%;
+}

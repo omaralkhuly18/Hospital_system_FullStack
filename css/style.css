@@ -4448,7 +4448,7 @@ section.section_appoinment {
 
 .section_appoinment .container{
 
-    padding-bottom: 7%;
+    padding-bottom: 10%;
 }
 
 
@@ -4463,7 +4463,7 @@ section.section_appoinment {
 }
 
 .section_appoinment .nice-select .list {
-    width: 30%;
+    width: 100%;
 }
 
 .section_appoinment label{
