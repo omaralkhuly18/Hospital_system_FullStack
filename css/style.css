@@ -974,7 +974,9 @@ F .header-cta-info {
 
 /* header menu area */
 
-.header-menu-area.fixed-header {
+.header-menu-area.fixed-header,
+.position_top_bar.fixed-header,
+.mobile_icon_spicial.fixed-header {
     height: 85px;
     z-index: 6000;
     top: 0;

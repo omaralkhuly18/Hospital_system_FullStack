@@ -1,24 +1,36 @@
 document.addEventListener('DOMContentLoaded', function () {
     // *** أكواد التمرير لإضافة وتعديل الكلاس على العناصر ***
 
+    const settings = {
+        scrollName: 'fixed_section', // ID العنصر
+        topDistance: 300, // المسافة من الأعلى قبل إظهار العنصر (px)
+        animation: 'fade', // نوع الحركة: fade, slide, none
+        animationInSpeed: 200, // سرعة الحركة عند الدخول (ms)
+        animationOutSpeed: 200, // سرعة الحركة عند الخروج (ms)
+        activeOverlay: false // تعيين لون CSS لإظهار نقطة التمرير النشطة، مثل '#00FFFF'
+    };
+
     const headerMenuArea = document.querySelector('.header-menu-area');
     const positionTopBar = document.querySelector('.position_top_bar');
+    const iconSpecialMedia = document.querySelector('.mobile_icon_spicial');
 
     // تحقق من وجود العناصر قبل الاستمرار
-    if (headerMenuArea && positionTopBar) {
+    if (headerMenuArea && positionTopBar && iconSpecialMedia) {
         window.addEventListener('scroll', function () {
             if (window.innerWidth <= 991 && window.innerWidth >= 230) {
-                if (window.scrollY > 0) {
+                if (window.scrollY > 200) {
                     headerMenuArea.classList.add('fixed-header');
                     positionTopBar.classList.add('fixed-header');
+                    iconSpecialMedia.classList.add('fixed-header');
                 } else {
                     headerMenuArea.classList.remove('fixed-header');
                     positionTopBar.classList.remove('fixed-header');
+                    iconSpecialMedia.classList.remove('fixed-header');
                 }
             }
         });
     } else {
-        console.warn('عناصر .header-menu-area أو .position_top_bar غير موجودة في الـ DOM.');
+        console.warn('عناصر .header-menu-area أو .mobile_icon_spicial أو  .position_top_bar  غير موجودة في الـ DOM.');
     }
 
     // *** أكواد التعامل مع التبويبات (Tabs) ***
@@ -120,35 +132,60 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // *** أكواد التعامل مع الفيديو المنبثق ***
 
-    // const placeSelect = document.getElementById('placeSelect');
-    // if (placeSelect) {
-    //     const fieldsToEnable = [
-    //         'branchSelect', 'mainSpecialtySelect', 'subSpecialtySelect',
-    //         'doctorSelect', 'feesInput', 'appointmentSelect', 'visitTypeSelect',
-    //         'fullNameInput', 'emailInput', 'phoneInput', 'dateInput', 'additionalInfoTextarea'
-    //     ];
-    //     const submitButton = document.querySelector('button[type="submit"]');
+    if (typeof $.fn.magnificPopup !== 'undefined') {
+        $('.popup-video').magnificPopup({
+            type: 'iframe',
+            iframe: {
+                patterns: {
+                    youtube: {
+                        index: 'youtube.com/', 
+                        id: 'v=', 
+                        src: '//www.youtube.com/embed/%id%?autoplay=1&enablejsapi=1'
+                    }
+                }
+            },
+            callbacks: {
+                beforeClose: function() {
+                    // إيقاف الفيديو عند إغلاق النافذة المنبثقة
+                    const videoPlayer = document.querySelector("#video-player");
+                    if (videoPlayer) {
+                        videoPlayer.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+                    }
+                }
+            }
+        });
+    }
 
-    //     function setFieldsEnabled(enabled) {
-    //         fieldsToEnable.forEach(function (id) {
-    //             const element = document.getElementById(id);
-    //             if (element) {
-    //                 element.disabled = !enabled;
-    //             }
-    //         });
-    //         if (submitButton) {
-    //             submitButton.disabled = !enabled;
-    //         }
-    //     }
+    // أكواد الفيديو المنبثق
+    const videoPopup = document.querySelector(".popup-video");
+    const videoSection = document.querySelector(".vedio_section_view");
+    const closeButton = document.querySelector(".close-video");
+    const videoPlayer = document.querySelector("#video-player");
+    const buttonNone = document.querySelector("#scrollUp");
 
-    //     setFieldsEnabled(false);
+    if (videoPopup && videoSection && closeButton && videoPlayer && buttonNone) {
+        videoPopup.addEventListener("click", function (event) {
+            event.preventDefault();
+            videoSection.style.display = "flex";
+            buttonNone.style.zIndex = 0;
+            buttonNone.style.display = "none";
+        });
 
-    //     placeSelect.addEventListener('change', function () {
-    //         setFieldsEnabled(this.value !== "");
-    //     });
-    // }
+        closeButton.addEventListener("click", function () {
+            videoSection.style.display = "none";
+            buttonNone.style.zIndex = 999999;
+            buttonNone.style.display = "block";
+
+            // إيقاف الفيديو عند الإغلاق
+            videoPlayer.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+        });
+    } else {
+        console.warn('بعض العناصر المطلوبة للفيديو المنبثق غير موجودة في الـ DOM.');
+    }
 });
+
 
 
 
@@ -744,11 +781,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     /* magnificPopup video view */
 
-    $('.popup-video').magnificPopup({
+    // $('.popup-video').magnificPopup({
 
-        type: 'iframe'
+    //     type: 'iframe'
 
-    });
+    // });
 
 
 
@@ -1056,7 +1093,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         scrollName: 'scrollUp', // Element ID
 
-        topDistance: '300', // Distance from top before showing element (px)
+        topDistance: '100', // Distance from top before showing element (px)
 
         topSpeed: 300, // Speed back to top (ms)
 
