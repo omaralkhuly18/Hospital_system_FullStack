@@ -1,15 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // *** أكواد التمرير لإضافة وتعديل الكلاس على العناصر ***
 
-    const settings = {
-        scrollName: 'fixed_section', // ID العنصر
-        topDistance: 300, // المسافة من الأعلى قبل إظهار العنصر (px)
-        animation: 'fade', // نوع الحركة: fade, slide, none
-        animationInSpeed: 200, // سرعة الحركة عند الدخول (ms)
-        animationOutSpeed: 200, // سرعة الحركة عند الخروج (ms)
-        activeOverlay: false // تعيين لون CSS لإظهار نقطة التمرير النشطة، مثل '#00FFFF'
-    };
-
     const headerMenuArea = document.querySelector('.header-menu-area');
     const positionTopBar = document.querySelector('.position_top_bar');
     const iconSpecialMedia = document.querySelector('.mobile_icon_spicial');
