@@ -197,7 +197,7 @@ button {
 
 }
 
-textarea{
+textarea {
     resize: none;
 }
 
@@ -888,6 +888,45 @@ header.header_top_nav {
     z-index: 500;
 }
 
+@media (min-width: 576px) {
+    .transparrent-header {
+        position: fixed;
+        height: 85px;
+        z-index: 6000;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .transparrent-header {
+        position: fixed;
+        height: auto;
+        z-index: 6000;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .transparrent-header {
+        position: absolute;
+        height: auto;
+    }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .transparrent-header {
+        position: absolute;
+        height: auto;
+    }
+}
+
 /* header-top */
 
 .top-bar {
@@ -932,8 +971,6 @@ header.header_top_nav {
 
 .transparrent-header {
 
-    position: absolute;
-
     right: 0;
 
     left: 0;
@@ -974,11 +1011,9 @@ F .header-cta-info {
 
 /* header menu area */
 
-.header-menu-area.fixed-header {
-    height: 85px;
-    z-index: 6000;
+/* .header-menu-area.fixed-header {
     top: 0;
-}
+} */
 
 .header-menu-area.fixed-header .container-fluid,
 .header-menu-area.fixed-header .row,
@@ -1002,6 +1037,7 @@ F .header-cta-info {
 
 .page_4_code .header-menu-area {
     background-color: #1977cc5e;
+    width: 100%;
 }
 
 .logo img {
@@ -4442,11 +4478,11 @@ li.price-del i {
 /* 13. Appoinment */
 
 section.section_appoinment {
-    
+
     background-color: #1977cc33;
 }
 
-.section_appoinment .container{
+.section_appoinment .container {
 
     padding-bottom: 10%;
 }
@@ -4457,7 +4493,7 @@ section.section_appoinment {
     margin-bottom: 15px;
 }
 
-.section_appoinment .nice-select{
+.section_appoinment .nice-select {
     width: 100%;
     font-size: 20px;
 }
@@ -4466,7 +4502,7 @@ section.section_appoinment {
     width: 100%;
 }
 
-.section_appoinment label{
+.section_appoinment label {
     font-size: 20px;
 }
 
@@ -5195,7 +5231,7 @@ section.section_appoinment {
 .doctor-detials-lan ul li a:hover {
 
     background-color: rgb(25 119 204);
-    
+
     box-shadow: 0px 8px 16px 0px rgb(7 132 190);
 
     color: #fff;
@@ -12052,12 +12088,12 @@ p.checkout-coupon input[type="text"] {
 }
 
 li.info_services,
-li.info_insurance{
+li.info_insurance {
     display: flex;
     align-items: center;
 }
 
-.link_goto_back{
+.link_goto_back {
     width: 10%;
     height: 50px;
     display: flex;
@@ -12071,7 +12107,7 @@ li.info_insurance{
     transition: 1s;
 }
 
-.link_goto_back:hover{
+.link_goto_back:hover {
     background-color: #166ab5;
     color: white;
 }

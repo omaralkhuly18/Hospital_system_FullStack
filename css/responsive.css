@@ -138,9 +138,9 @@
         width: 100%;
     }
 
-    .transparrent-header {
+    /* .transparrent-header {
         position: fixed;
-    }
+    } */
 
     .slider_not .slick-track {
         height: 980px;
