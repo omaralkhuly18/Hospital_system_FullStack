@@ -316,9 +316,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
             arrows: true,
 
-            prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-arrow-left"></i></button>',
+            prevArrow: '<button type="button" class="tajawal_black slick-prev"><i class=" fas fa-arrow-left"></i></button>',
 
-            nextArrow: '<button type="button" class="slick-next"><i class="fas fa-arrow-right"></i></button>',
+            nextArrow: '<button type="button" class="tajawal_black slick-next"><i class=" fas fa-arrow-right"></i></button>',
 
             responsive: [
 
@@ -424,7 +424,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         items: 1,
 
-        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+        navText: ['<i class=" fa fa-angle-left"></i>', '<i class=" fa fa-angle-right"></i>'],
 
         nav: false,
 
@@ -472,7 +472,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         items: 1,
 
-        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+        navText: ['<i class=" fa fa-angle-left"></i>', '<i class=" fa fa-angle-right"></i>'],
 
         nav: false,
 
@@ -522,9 +522,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         speed: 300,
 
-        prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-arrow-left"></i></button>',
+        prevArrow: '<button type="button" class="tajawal_black slick-prev"><i class=" fas fa-arrow-left"></i></button>',
 
-        nextArrow: '<button type="button" class="slick-next"><i class="fas fa-arrow-right"></i></button>',
+        nextArrow: '<button type="button" class="tajawal_black slick-next"><i class=" fas fa-arrow-right"></i></button>',
 
         slidesToShow: 1,
 
@@ -592,9 +592,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         speed: 300,
 
-        prevArrow: '<button type="button" class="slick-prev"><i class="fal fa-angle-left"></i></button>',
+        prevArrow: '<button type="button" class="tajawal_black slick-prev"><i class=" fal fa-angle-left"></i></button>',
 
-        nextArrow: '<button type="button" class="slick-next"><i class="fal fa-angle-right"></i></button>',
+        nextArrow: '<button type="button" class="tajawal_black slick-next"><i class=" fal fa-angle-right"></i></button>',
 
         slidesToShow: 3,
 
@@ -666,9 +666,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         speed: 300,
 
-        prevArrow: '<button type="button" class="slick-prev"><i class="fal fa-angle-left"></i></button>',
+        prevArrow: '<button type="button" class="tajawal_black slick-prev"><i class=" fal fa-angle-left"></i></button>',
 
-        nextArrow: '<button type="button" class="slick-next"><i class="fal fa-angle-right"></i></button>',
+        nextArrow: '<button type="button" class="tajawal_black slick-next"><i class=" fal fa-angle-right"></i></button>',
 
         slidesToShow: 2,
 
@@ -1072,7 +1072,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         animationOutSpeed: 200, // Animation out speed (ms)
 
-        scrollText: '<i class="fas fa-chevron-up"></i>', // Text for element
+        scrollText: '<i class=" fas fa-chevron-up"></i>', // Text for element
 
         activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
 
