@@ -1,25 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // *** أكواد التمرير لإضافة وتعديل الكلاس على العناصر ***
-
-    const headerMenuArea = document.querySelector('.header-menu-area');
-    const positionTopBar = document.querySelector('.position_top_bar');
-
-    // تحقق من وجود العناصر قبل الاستمرار
-    if (headerMenuArea && positionTopBar) {
-        window.addEventListener('scroll', function () {
-            if (window.innerWidth <= 991 && window.innerWidth >= 230) {
-                if (window.scrollY > 0) {
-                    headerMenuArea.classList.add('fixed-header');
-                    positionTopBar.classList.add('fixed-header');
-                } else {
-                    headerMenuArea.classList.remove('fixed-header');
-                    positionTopBar.classList.remove('fixed-header');
-                }
-            }
-        });
-    } else {
-        console.warn('عناصر .header-menu-area أو .position_top_bar غير موجودة في الـ DOM.');
-    }
 
     // *** أكواد التعامل مع التبويبات (Tabs) ***
 
@@ -147,31 +126,33 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // أكواد الفيديو المنبثق
-    const videoPopup = document.querySelector(".popup-video");
+    const videoPopups = document.querySelectorAll(".popup-video");
     const videoSection = document.querySelector(".vedio_section_view");
     const closeButton = document.querySelector(".close-video");
     const videoPlayer = document.querySelector("#video-player");
     const buttonNone = document.querySelector("#scrollUp");
-
-    if (videoPopup && videoSection && closeButton && videoPlayer && buttonNone) {
-        videoPopup.addEventListener("click", function (event) {
-            event.preventDefault();
-            videoSection.style.display = "flex";
-            buttonNone.style.zIndex = 0;
-            buttonNone.style.display = "none";
+    
+    if (videoPopups && videoSection && closeButton && videoPlayer && buttonNone) {
+        videoPopups.forEach((popup) => {
+            popup.addEventListener("click", function (event) {
+                event.preventDefault();
+                videoSection.style.display = "flex";
+                buttonNone.style.zIndex = 0;
+                buttonNone.style.display = "none";
+            });
         });
-
+    
         closeButton.addEventListener("click", function () {
             videoSection.style.display = "none";
             buttonNone.style.zIndex = 999999;
             buttonNone.style.display = "block";
-
+    
             // إيقاف الفيديو عند الإغلاق
             videoPlayer.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
         });
     } else {
         console.warn('بعض العناصر المطلوبة للفيديو المنبثق غير موجودة في الـ DOM.');
-    }
+    }    
 });
 
 
@@ -1242,26 +1223,26 @@ document.addEventListener('DOMContentLoaded', function () {
 })(jQuery);
 
 
-const mobileHeader = document.querySelector('.mobile_icon_spicial');
-const positionTopBar = document.querySelector('.position_top_bar');
-const menuArea = document.querySelector('.menu-area4');
-document.addEventListener("DOMContentLoaded", () => {
-    if (mobileHeader && positionTopBar && menuArea) {
-        window.addEventListener('scroll', function () {
-            if (window.innerWidth <= 991 && window.innerWidth >= 230) {
-                if (window.scrollY > 0) {
-                    mobileHeader.style.top = 0;
-                    positionTopBar.style.position = "fixed";
-                    positionTopBar.style.zIndex = 2000;
-                    positionTopBar.style.backgroundColor = "white";
-                } else {
-                    mobileHeader.style.top = "auto";
-                    positionTopBar.style.position = "relative";
-                    menuArea.style.backgroundColor = "#1977cc5e";
-                }
-            }
-        });
-    } else {
-        console.warn('عناصر .header-menu-area أو .position_top_bar غير موجودة في الـ DOM.');
-    }
-});
+// const mobileHeader = document.querySelector('.mobile_icon_spicial');
+// const positionTopBar = document.querySelector('.position_top_bar');
+// const menuArea = document.querySelector('.menu-area4');
+// document.addEventListener("DOMContentLoaded", () => {
+//     if (mobileHeader && positionTopBar && menuArea) {
+//         window.addEventListener('scroll', function () {
+//             if (window.innerWidth <= 991 && window.innerWidth >= 230) {
+//                 if (window.scrollY > 0) {
+//                     mobileHeader.style.top = 0;
+//                     positionTopBar.style.position = "fixed";
+//                     positionTopBar.style.zIndex = 2000;
+//                     positionTopBar.style.backgroundColor = "white";
+//                 } else {
+//                     mobileHeader.style.top = "auto";
+//                     positionTopBar.style.position = "relative";
+//                     menuArea.style.backgroundColor = "#1977cc5e";
+//                 }
+//             }
+//         });
+//     } else {
+//         console.warn('عناصر .header-menu-area أو .position_top_bar غير موجودة في الـ DOM.');
+//     }
+// });

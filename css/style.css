@@ -891,7 +891,6 @@ header.header_top_nav {
 @media (min-width: 576px) {
     .transparrent-header {
         position: fixed;
-        height: 85px;
         z-index: 6000;
         top: 0;
         left: 0;
@@ -902,12 +901,8 @@ header.header_top_nav {
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
     .transparrent-header {
-        position: fixed;
+        position: absolute;
         height: auto;
-        z-index: 6000;
-        top: 0;
-        left: 0;
-        width: 100%;
     }
 }
 
@@ -1015,6 +1010,10 @@ F .header-cta-info {
     top: 0;
 } */
 
+.header-menu-area{
+    height: 85px;
+}
+
 .header-menu-area.fixed-header .container-fluid,
 .header-menu-area.fixed-header .row,
 .header-menu-area.fixed-header .d-flex {
@@ -1036,7 +1035,7 @@ F .header-cta-info {
 }
 
 .page_4_code .header-menu-area {
-    background-color: #1977cc5e;
+    background-color: #71c8ce;
     width: 100%;
 }
 
@@ -10858,13 +10857,15 @@ p.checkout-coupon input[type="text"] {
 
     background: #4098e7;
 
-    height: 50px;
+    height: 25px;
 
-    width: 50px;
+    width: 15px;
 
     border-radius: 5px;
 
-    left: -5%;
+    left: 0;
+
+    display: none !important;
 
     transition: .4s;
 
@@ -10874,7 +10875,7 @@ p.checkout-coupon input[type="text"] {
 
     left: auto;
 
-    right: -5%;
+    right: 0;
 
 }
 

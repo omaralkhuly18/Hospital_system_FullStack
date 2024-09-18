@@ -124,16 +124,18 @@
 }
 
 /* new media */
-@media screen and (max-width: 991px) and (min-width: 230px) {
-    .header-menu-area.fixed-header {
+@media screen and (max-width: 767px) and (min-width: 230px) {
+    .header-menu-area {
         background-color: #3a4752cf;
+        position: fixed;
     }
 
-    .position_top_bar.fixed-header {
+    .position_top_bar {
         background-color: #3a4752cf;
+        position: fixed;
     }
 
-    .page_4_code .position_top_bar.fixed-header{
+    .page_4_code .position_top_bar{
         position: fixed;
         width: 100%;
     }
@@ -241,6 +243,29 @@
     .list_icon_ersponsive{
         display: block;
     }
+    .section_hero4 {
+        height: 600px;
+    }
+    
+    .section_hero4 .hero-slider {
+        height: 100%;
+    }
+    
+    .section_hero4 .slick-slider {
+        height: 100%;
+    }
+    
+    .section_hero4 .single-slider {
+        height: 100%;
+    }
+    
+    .section_hero4 .draggable {
+        height: 100%;
+    }
+    
+    .section_hero4 .slick-track {
+        height: 100%;
+    }
 }
 
 @media screen and (max-width: 1199px) and (min-width: 991px) {
@@ -278,10 +303,11 @@
     .page_4_code .position_top_bar{
         height: 85px;
         width: 100%;
+        z-index: 10;
         display: flex;
         align-items: center;
         justify-content: space-between;
-    }
+    }   
 }
 
 /* Normal desktop :992px. */
@@ -1574,7 +1600,7 @@
 
     .hero-slider-caption h1 {
 
-        font-size: 40px;
+        font-size: 20px !important;
 
     }
 
@@ -2541,9 +2567,9 @@
 
     .h4slider-bg {
 
-        padding-top: 70px;
+        padding-top: 100px;
 
-        padding-bottom: 70px;
+        padding-bottom: 5px;
 
         background-size: cover;
 
@@ -2555,7 +2581,9 @@
 
     }
 
-
+    .section_hero4 .hero-text h3.white-color {
+        font-size: 18px;
+    }
 
     .h4about-right {
 
